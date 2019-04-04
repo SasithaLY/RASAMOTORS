@@ -1,39 +1,46 @@
-﻿using RASAMOTORS.JobCard.common;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using RASAMOTORS.JobCard.common;
 
 namespace RASAMOTORS.JobCard.jobCardClasses
 {
-    public class jobCard
+    class assignJobclass
     {
-        //getter setter properties
+
+        //assign getters and setters
         public int Id { get; set; }
 
-        public String Name { get; set; }
+        public string vehicleNo { get; set; }
 
-        public float Price { get; set; }
+        public string jobOne { get; set; }
 
-        public String Description { get; set; }
+        public string jobTwo { get; set; }
 
-        //static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
-        static string myconnstring = @"Data Source=CHARMINPC\SQLEXPRESS;Initial Catalog=ServiceCenter;Integrated Security=True";
+        public string jobThree { get; set; }
+
+        public float predictPrice { get; set; }
+
+        public DateTime date { get; set; }
+
+        public string jobStatus { get; set; }
+
+        //static string mynewconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        static string mynewconnstring = @"Data Source=CHARMINPC\SQLEXPRESS;Initial Catalog=ServiceCenter;Integrated Security=True";
 
         //selecting Data from database
         public DataTable Select()
         {
-            SqlConnection conn = new SqlConnection(myconnstring);
+            SqlConnection conn = new SqlConnection(mynewconnstring);
             DataTable dt = new DataTable();
             try
             {
                 //Writing Sql Querry
-                string sql = "SELECT * FROM allJob";
+                string sql = "SELECT Id as 'Job Id',vehicleNo as 'Vehicle No',jobOne  as 'Job',jobTwo as 'Job',jobThree as 'Job',predictPrice as 'Price Prdicted',jobStatus as 'Status',date as 'Date Of Entry' FROM jobPred";
                 //creating cmd using sql and comm
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //creating  SQL Database using
@@ -53,20 +60,24 @@ namespace RASAMOTORS.JobCard.jobCardClasses
         }
 
         //Inserting Data Into DataBAse
-        public bool Insert(jobCard c)
+        public bool InsertJob(assignJobclass c)
         {
             bool IsSuccess = false;
 
             //step1:connect database
-            SqlConnection conn = new SqlConnection(myconnstring);
+            SqlConnection conn = new SqlConnection(mynewconnstring);
             try
             {
-                string sql = "INSERT INTO allJob(Name, Price, Description)VALUES(@Name, @Price, @Description)";
+                string sql = "INSERT INTO jobPred(vehicleNo, jobOne, jobTwo, jobThree, predictPrice,date)VALUES(@vehicleNo, @jobOne, @jobTwo, @jobThree, @predictPrice, @date)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
-                cmd.Parameters.AddWithValue("@Name", c.Name);
-                cmd.Parameters.AddWithValue("@Price", c.Price);
-                cmd.Parameters.AddWithValue("@Description", c.Description);
+                cmd.Parameters.AddWithValue("@vehicleNo", c.Id);
+                cmd.Parameters.AddWithValue("@jobOne", c.jobOne);
+                cmd.Parameters.AddWithValue("@jobTwo", c.jobTwo);
+                cmd.Parameters.AddWithValue("@jobThree", c.jobThree);
+                cmd.Parameters.AddWithValue("@predictPrice", c.predictPrice);
+                cmd.Parameters.AddWithValue("@date", DateTime.Now);
+
 
                 //connection open here
                 conn.Open();
@@ -91,26 +102,23 @@ namespace RASAMOTORS.JobCard.jobCardClasses
                 conn.Close();
             }
             return IsSuccess;
-
         }
 
+
         //Update Method 
-        public bool Update(jobCard c)
+        public bool Update(assignJobclass c)
         {
             bool isSuccess = false;
 
-            SqlConnection conn = new SqlConnection(myconnstring);
+            SqlConnection conn = new SqlConnection(mynewconnstring);
             try
             {
-                string sql = "UPDATE allJob SET Name=@Name, Price=@Price, Description=@Description Where Id=@Id";
+                string sql = "UPDATE jobPred SET jobStatus=@jobStatus Where Id=@Id";
 
                 //Creating SQL command
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //Set Parameters
-                cmd.Parameters.AddWithValue("@Name", c.Name);
-                cmd.Parameters.AddWithValue("@Price", c.Price);
-                cmd.Parameters.AddWithValue("@Description", c.Description);
-
+                cmd.Parameters.AddWithValue("@jobStatus", c.jobStatus);
                 cmd.Parameters.AddWithValue("@Id", c.Id);
 
                 conn.Open();
@@ -136,44 +144,7 @@ namespace RASAMOTORS.JobCard.jobCardClasses
             }
             return isSuccess;
 
-        }
-
-        //Method to Delete
-        public bool Delete(jobCard c)
-        {
-            bool isSuccess = false;
-
-            SqlConnection conn = new SqlConnection(myconnstring);
-            try
-            {
-                string sql = "DELETE FROM allJob where Id=@Id";
-
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@Id", c.Id);
-
-                conn.Open();
-
-                int rows = cmd.ExecuteNonQuery();
-
-                if (rows > 0)
-                {
-                    isSuccess = true;
-                }
-                else
-                {
-                    isSuccess = false;
-                }
-            }
-            catch (Exception ex)
-            {
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return isSuccess;
         }
 
     }
 }
-
