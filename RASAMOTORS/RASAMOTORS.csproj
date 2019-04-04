@@ -53,12 +53,14 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="JobCard\common\globalVariables.cs" />
     <Compile Include="JobCard\createJob.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JobCard\createJob.Designer.cs">
       <DependentUpon>createJob.cs</DependentUpon>
     </Compile>
+    <Compile Include="JobCard\jobCardClasses\assignJobclass.cs" />
     <Compile Include="JobCard\jobCardClasses\jobCard.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
