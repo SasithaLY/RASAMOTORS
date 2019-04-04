@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RASAMOTORS
+namespace RASAMOTORS.JobCard
 {
-    public partial class Home : Form
+    public partial class createJob : Form
     {
-        public Home()
+        public createJob()
         {
             InitializeComponent();
-        }
-
-        private void jobBtn_Click(object sender, EventArgs e)
-        {
-            new JobCard.createJob().Show();
         }
     }
 }

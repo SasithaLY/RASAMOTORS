@@ -43,9 +43,9 @@
             this.cusBtn = new System.Windows.Forms.Button();
             this.jobBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pnlHeader.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,7 +62,7 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(10, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1160, 131);
+            this.pnlHeader.Size = new System.Drawing.Size(1080, 131);
             this.pnlHeader.TabIndex = 14;
             // 
             // panel7
@@ -71,7 +71,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 121);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1160, 10);
+            this.panel7.Size = new System.Drawing.Size(1080, 10);
             this.panel7.TabIndex = 19;
             // 
             // label10
@@ -80,7 +80,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(769, 65);
+            this.label10.Location = new System.Drawing.Point(689, 65);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(339, 44);
             this.label10.TabIndex = 25;
@@ -92,7 +92,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(637, 12);
+            this.label9.Location = new System.Drawing.Point(557, 12);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(480, 50);
             this.label9.TabIndex = 24;
@@ -115,7 +115,7 @@
             this.pnlMenu.Controls.Add(this.jobBtn);
             this.pnlMenu.Location = new System.Drawing.Point(0, -39);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(505, 888);
+            this.pnlMenu.Size = new System.Drawing.Size(425, 827);
             this.pnlMenu.TabIndex = 15;
             // 
             // button6
@@ -278,6 +278,7 @@
             this.jobBtn.TabIndex = 4;
             this.jobBtn.Text = "Job";
             this.jobBtn.UseVisualStyleBackColor = true;
+            this.jobBtn.Click += new System.EventHandler(this.jobBtn_Click);
             // 
             // panel1
             // 
@@ -289,8 +290,30 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(280, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1170, 811);
+            this.panel1.Size = new System.Drawing.Size(1090, 750);
             this.panel1.TabIndex = 16;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(10, 706);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1080, 44);
+            this.panel3.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(1080, 44);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Copyright © 2019 VALT PACK Solutions. All Right Reserved.";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -298,37 +321,15 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 811);
+            this.panel2.Size = new System.Drawing.Size(10, 750);
             this.panel2.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(10, 767);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1160, 44);
-            this.panel3.TabIndex = 17;
-            // 
-            // label8
-            // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label8.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1160, 44);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Copyright © 2019 VALT PACK Solutions. All Right Reserved.";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(1450, 810);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMenu);
             this.Name = "Home";
