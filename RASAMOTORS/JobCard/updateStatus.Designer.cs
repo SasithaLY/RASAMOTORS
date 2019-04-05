@@ -161,6 +161,7 @@
             this.button1.TabIndex = 101;
             this.button1.Text = "BACK";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // stUpdt
             // 
@@ -175,6 +176,7 @@
             this.stUpdt.TabIndex = 100;
             this.stUpdt.Text = "UPDATE";
             this.stUpdt.UseVisualStyleBackColor = false;
+            this.stUpdt.Click += new System.EventHandler(this.stUpdt_Click);
             // 
             // txtUPrc
             // 

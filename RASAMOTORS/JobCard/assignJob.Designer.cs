@@ -39,7 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboJthree = new System.Windows.Forms.ComboBox();
             this.comboJtwo = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAsJb = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtPdctPrc = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -153,6 +153,7 @@
             this.comboJthree.Name = "comboJthree";
             this.comboJthree.Size = new System.Drawing.Size(121, 28);
             this.comboJthree.TabIndex = 96;
+            this.comboJthree.SelectedIndexChanged += new System.EventHandler(this.comboJthree_SelectedIndexChanged);
             // 
             // comboJtwo
             // 
@@ -162,20 +163,22 @@
             this.comboJtwo.Name = "comboJtwo";
             this.comboJtwo.Size = new System.Drawing.Size(121, 28);
             this.comboJtwo.TabIndex = 95;
+            this.comboJtwo.SelectedIndexChanged += new System.EventHandler(this.comboJtwo_SelectedIndexChanged);
             // 
-            // button1
+            // btnAsJb
             // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(843, 475);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 94;
-            this.button1.Text = "Assign Job";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAsJb.BackColor = System.Drawing.Color.Maroon;
+            this.btnAsJb.FlatAppearance.BorderSize = 0;
+            this.btnAsJb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAsJb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsJb.ForeColor = System.Drawing.Color.White;
+            this.btnAsJb.Location = new System.Drawing.Point(843, 475);
+            this.btnAsJb.Name = "btnAsJb";
+            this.btnAsJb.Size = new System.Drawing.Size(112, 34);
+            this.btnAsJb.TabIndex = 94;
+            this.btnAsJb.Text = "Assign Job";
+            this.btnAsJb.UseVisualStyleBackColor = false;
+            this.btnAsJb.Click += new System.EventHandler(this.btnAsJb_Click);
             // 
             // label6
             // 
@@ -216,6 +219,7 @@
             this.txtJThreePrc.Size = new System.Drawing.Size(100, 26);
             this.txtJThreePrc.TabIndex = 90;
             this.txtJThreePrc.Text = "Price";
+            this.txtJThreePrc.TextChanged += new System.EventHandler(this.txtJThreePrc_TextChanged);
             // 
             // txtJTwoPrc
             // 
@@ -226,6 +230,7 @@
             this.txtJTwoPrc.Size = new System.Drawing.Size(100, 26);
             this.txtJTwoPrc.TabIndex = 89;
             this.txtJTwoPrc.Text = "Price";
+            this.txtJTwoPrc.TextChanged += new System.EventHandler(this.txtJTwoPrc_TextChanged);
             // 
             // txtJOnePrc
             // 
@@ -236,6 +241,7 @@
             this.txtJOnePrc.Size = new System.Drawing.Size(100, 26);
             this.txtJOnePrc.TabIndex = 88;
             this.txtJOnePrc.Text = "Price";
+            this.txtJOnePrc.TextChanged += new System.EventHandler(this.txtJOnePrc_TextChanged);
             // 
             // comboJone
             // 
@@ -245,6 +251,7 @@
             this.comboJone.Name = "comboJone";
             this.comboJone.Size = new System.Drawing.Size(121, 28);
             this.comboJone.TabIndex = 87;
+            this.comboJone.SelectedIndexChanged += new System.EventHandler(this.comboJone_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -274,7 +281,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboJthree);
             this.Controls.Add(this.comboJtwo);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAsJb);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPdctPrc);
             this.Controls.Add(this.label5);
@@ -285,6 +292,7 @@
             this.Name = "assignJob";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "assignJob";
+            this.Load += new System.EventHandler(this.assignJob_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -304,7 +312,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboJthree;
         private System.Windows.Forms.ComboBox comboJtwo;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAsJb;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPdctPrc;
         private System.Windows.Forms.Label label5;
