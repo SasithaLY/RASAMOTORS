@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RASAMOTORS
+namespace RASAMOTORS.JobCard
 {
-    public partial class Home : Form
+    public partial class updateStatus : Form
     {
-        public Home()
+        public updateStatus()
         {
             InitializeComponent();
-        }
-
-        private void jobBtn_Click(object sender, EventArgs e)
-        {
-            new JobCard.searchJob().Show();
         }
     }
 }

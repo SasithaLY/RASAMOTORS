@@ -95,5 +95,11 @@ namespace RASAMOTORS.JobCard
             DataTable dt = c.Select();
             dgvallJobs.DataSource = dt;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new assignJob().Show();
+            this.Close();
+        }
     }
 }
