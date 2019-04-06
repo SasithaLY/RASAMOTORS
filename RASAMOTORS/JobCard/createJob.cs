@@ -155,5 +155,10 @@ namespace RASAMOTORS.JobCard
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
