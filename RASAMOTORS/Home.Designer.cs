@@ -224,6 +224,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Inventory";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // payBtn
             // 
@@ -279,6 +280,7 @@
             this.jobBtn.TabIndex = 4;
             this.jobBtn.Text = "Job";
             this.jobBtn.UseVisualStyleBackColor = true;
+            this.jobBtn.Click += new System.EventHandler(this.jobBtn_Click);
             // 
             // panel1
             // 

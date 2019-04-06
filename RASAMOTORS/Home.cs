@@ -1,4 +1,6 @@
-﻿using RASAMOTORS.Suppliers;
+
+using RASAMOTORS.Suppliers;
+using RASAMOTORS.Suppliers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +20,7 @@ namespace RASAMOTORS
             InitializeComponent();
         }
 
+
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -27,6 +30,16 @@ namespace RASAMOTORS
             this.Close();
 
             //new Supplier.suppliers().Show();
+
+        private void jobBtn_Click(object sender, EventArgs e)
+        {
+            new JobCard.createJob().Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            InventoryView inventory = new InventoryView();
+            inventory.Show();
         }
     }
 }
