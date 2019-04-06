@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RASAMOTORS.Inventory;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,12 @@ namespace RASAMOTORS
         private void jobBtn_Click(object sender, EventArgs e)
         {
             new JobCard.createJob().Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            InventoryView inventory = new InventoryView();
+            inventory.Show();
         }
     }
 }
