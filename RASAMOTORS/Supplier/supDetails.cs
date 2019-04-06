@@ -21,7 +21,7 @@ namespace RASAMOTORS.Suppliers
             InitializeComponent();
         }
 
-        supplierClass c = new supplierClass();
+        public supplierClass c = new supplierClass();
 
         
 
@@ -37,17 +37,17 @@ namespace RASAMOTORS.Suppliers
             update.txtFName.Text = supplierView.Rows[rowIndex].Cells[2].Value.ToString();
             update.txtLName.Text = supplierView.Rows[rowIndex].Cells[3].Value.ToString();
             update.txtCNum.Text = supplierView.Rows[rowIndex].Cells[4].Value.ToString();
-            update.supplierDate.Text = supplierView.Rows[rowIndex].Cells[5].Value.ToString();
-            update.txtEmail.Text = supplierView.Rows[rowIndex].Cells[6].Value.ToString();
-            update.txtCName.Text = supplierView.Rows[rowIndex].Cells[7].Value.ToString();
-            update.cmbGender.Text = supplierView.Rows[rowIndex].Cells[8].Value.ToString();
+            //update.supplierDate.Text = supplierView.Rows[rowIndex].Cells[5].Value.ToString();
+            update.txtEmail.Text = supplierView.Rows[rowIndex].Cells[5].Value.ToString();
+            update.txtCName.Text = supplierView.Rows[rowIndex].Cells[6].Value.ToString();
+            update.cmbGender.Text = supplierView.Rows[rowIndex].Cells[7].Value.ToString();
 
             update.ShowDialog();
 
 
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
+        private void btnOrder_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             supplieInsert supplier = new supplieInsert();
@@ -79,7 +79,7 @@ namespace RASAMOTORS.Suppliers
             supplierView.DataSource = dt;
         }
 
-        private void btnRepotr_Click(object sender, EventArgs e)
+        private void btnRepotr_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             reportViewSup supplier = new reportViewSup();
@@ -93,7 +93,7 @@ namespace RASAMOTORS.Suppliers
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
 
         }
@@ -129,9 +129,12 @@ namespace RASAMOTORS.Suppliers
             }
         }
 
-        private void supDetails_Load(object sender, EventArgs e)
-        {
 
-        }
+        //private void supDetails_Load(object sender, EventArgs e)
+        //{
+
+        //}
+
+
     }
 }

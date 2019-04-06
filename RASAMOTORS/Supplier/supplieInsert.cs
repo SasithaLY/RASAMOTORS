@@ -28,7 +28,7 @@ namespace RASAMOTORS.Supplier
         {
 
         }
-        private void btnADD_Click_1(object sender, EventArgs e)
+        private void btnADD_Click(object sender, EventArgs e)
         {
             //add the values
             c.supplierNIC = txtNIC.Text;
@@ -143,7 +143,7 @@ namespace RASAMOTORS.Supplier
 
         }
 
-        private void btnClear_Click_1(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             //clear data
             Clear();
@@ -151,7 +151,7 @@ namespace RASAMOTORS.Supplier
 
         static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             suppliers order = new suppliers();
@@ -160,7 +160,7 @@ namespace RASAMOTORS.Supplier
 
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
+        private void btnOrder_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             orderInsert order = new orderInsert();
@@ -183,5 +183,7 @@ namespace RASAMOTORS.Supplier
         {
             // DataTable dt = c.Select();
         }
+
+
     }
 }

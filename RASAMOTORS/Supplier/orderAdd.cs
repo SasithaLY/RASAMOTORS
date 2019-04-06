@@ -30,7 +30,7 @@ namespace RASAMOTORS.Supplier
 
 
 
-        private void ordADD_Click(object sender, EventArgs e)
+        private void ordADD_Click_1(object sender, EventArgs e)
         {
             //add the values
             c.supplierName = txtSupName.Text;
@@ -49,12 +49,12 @@ namespace RASAMOTORS.Supplier
             //   MessageBox.Show("Please fill the Fields");
             //}
 
-            if (!isSupplierNamePattern)
+            if (!isSupplierNamePattern || c.supplierName == "")
             {
                 MessageBox.Show("Empty Fields or Invalid Supplier name");
             }
 
-            else if (isAmountPattern)
+            else if (isAmountPattern || c.amount == "")
             {
                 MessageBox.Show("Empty Fields or Invalid Amount");
             }
@@ -114,7 +114,7 @@ namespace RASAMOTORS.Supplier
         }
 
 
-        private void btnClear_Click_1(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             //clear data
             Clear();
@@ -123,18 +123,20 @@ namespace RASAMOTORS.Supplier
         static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
 
 
-        private void btnBack_Click_1(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
             orderInsert order = new orderInsert();
             order.ShowDialog();
         }
 
-        private void btnView_Click(object sender, EventArgs e)
+        private void btnView_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             orderInsert order = new orderInsert();
             order.ShowDialog();
         }
+
+
     }
 }

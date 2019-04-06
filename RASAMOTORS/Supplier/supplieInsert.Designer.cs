@@ -292,6 +292,7 @@
             this.btnClear.TabIndex = 77;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnOrder
             // 
@@ -304,6 +305,7 @@
             this.btnOrder.TabIndex = 78;
             this.btnOrder.Text = "Order Details";
             this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click_1);
             // 
             // btnBack
             // 
@@ -316,6 +318,7 @@
             this.btnBack.TabIndex = 79;
             this.btnBack.Text = "View";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // btnADD
             // 
@@ -328,6 +331,7 @@
             this.btnADD.TabIndex = 76;
             this.btnADD.Text = "ADD";
             this.btnADD.UseVisualStyleBackColor = false;
+            this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
             // 
             // supplieInsert
             // 

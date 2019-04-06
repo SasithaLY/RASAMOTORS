@@ -76,6 +76,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Supplier\common\globalVariables.cs" />
     <Compile Include="Supplier\orderAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +107,9 @@
     </Compile>
     <Compile Include="Supplier\supplieInsert.Designer.cs">
       <DependentUpon>supplieInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier\supplierDataSet.cs">
+      <DependentUpon>supplierDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Supplier\supplierDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

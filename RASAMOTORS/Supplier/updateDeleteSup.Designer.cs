@@ -293,6 +293,7 @@
             this.btnBack.TabIndex = 102;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // btnClear
             // 
@@ -305,6 +306,7 @@
             this.btnClear.TabIndex = 101;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnUpdate
             // 
@@ -317,6 +319,7 @@
             this.btnUpdate.TabIndex = 100;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnDelete
             // 
@@ -329,6 +332,7 @@
             this.btnDelete.TabIndex = 99;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtSupID
             // 

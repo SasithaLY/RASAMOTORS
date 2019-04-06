@@ -21,7 +21,7 @@
               <Width>1.23958in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.08333in</Width>
+              <Width>1.26041in</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>1.11458in</Width>
@@ -370,7 +370,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>supplierID</rd:DefaultName>
@@ -400,7 +402,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>supplierNIC</rd:DefaultName>
@@ -430,7 +434,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>firstName</rd:DefaultName>
@@ -460,7 +466,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>lastName</rd:DefaultName>
@@ -490,7 +498,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>contactNumber</rd:DefaultName>
@@ -520,7 +530,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>email</rd:DefaultName>
@@ -550,7 +562,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>companyName</rd:DefaultName>
@@ -580,7 +594,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>gender</rd:DefaultName>
@@ -610,7 +626,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>supDate</rd:DefaultName>
@@ -655,10 +673,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>supplierData</DataSetName>
-        <Top>1.03in</Top>
+        <Top>0.3425in</Top>
         <Left>0.31772in</Left>
-        <Height>0.78125in</Height>
-        <Width>9.97395in</Width>
+        <Height>0.78124in</Height>
+        <Width>10.15102in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -666,7 +684,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.20834in</Height>
+    <Height>1.47917in</Height>
     <Style />
   </Body>
   <Width>10.625in</Width>

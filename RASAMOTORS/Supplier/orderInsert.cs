@@ -69,14 +69,14 @@ namespace RASAMOTORS.Supplier
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             supplieInsert supplier = new supplieInsert();
             supplier.ShowDialog();
         }
 
-        private void btnView_Click(object sender, EventArgs e)
+        private void btnView_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             orderAdd order = new orderAdd();
@@ -103,6 +103,11 @@ namespace RASAMOTORS.Supplier
                 txtSearch.ForeColor = Color.Silver;
 
             }
+        }
+
+        private void orderView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

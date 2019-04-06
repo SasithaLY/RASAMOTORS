@@ -30,7 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(reportViewSup));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.supplierDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.supplierDataSet = new RASAMOTORS.Supplier.supplierDataSet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,14 +43,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.supplierDataSet = new RASAMOTORS.Supplier.supplierDataSet();
-            this.supplierDetailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.supplierDetailsTableAdapter = new RASAMOTORS.Supplier.supplierDataSetTableAdapters.supplierDetailsTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierDetailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierDetailsBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // supplierDetailsBindingSource
+            // 
+            this.supplierDetailsBindingSource.DataMember = "supplierDetails";
+            this.supplierDetailsBindingSource.DataSource = this.supplierDataSet;
+            // 
+            // supplierDataSet
+            // 
+            this.supplierDataSet.DataSetName = "supplierDataSet";
+            this.supplierDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pictureBox1
             // 
@@ -115,6 +125,7 @@
             this.btnBackView.TabIndex = 61;
             this.btnBackView.Text = "Back";
             this.btnBackView.UseVisualStyleBackColor = false;
+            this.btnBackView.Click += new System.EventHandler(this.btnBackView_Click);
             // 
             // button1
             // 
@@ -136,7 +147,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 480);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1025, 41);
+            this.panel1.Size = new System.Drawing.Size(1151, 41);
             this.panel1.TabIndex = 62;
             // 
             // textBox1
@@ -153,25 +164,16 @@
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "supplierData";
-            reportDataSource2.Value = this.supplierDetailsBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "supplierData";
+            reportDataSource1.Value = this.supplierDetailsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "RASAMOTORS.Supplier.supplierReport.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(292, 183);
+            this.reportViewer1.Location = new System.Drawing.Point(93, 180);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(719, 246);
+            this.reportViewer1.Size = new System.Drawing.Size(1021, 294);
             this.reportViewer1.TabIndex = 63;
-            // 
-            // supplierDataSet
-            // 
-            this.supplierDataSet.DataSetName = "supplierDataSet";
-            this.supplierDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // supplierDetailsBindingSource
-            // 
-            this.supplierDetailsBindingSource.DataMember = "supplierDetails";
-            this.supplierDetailsBindingSource.DataSource = this.supplierDataSet;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // supplierDetailsTableAdapter
             // 
@@ -182,7 +184,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1025, 521);
+            this.ClientSize = new System.Drawing.Size(1151, 521);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBackView);
@@ -195,11 +197,11 @@
             this.Name = "reportViewSup";
             this.Text = "reportViewSup";
             this.Load += new System.EventHandler(this.reportViewSup_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.supplierDetailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierDetailsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

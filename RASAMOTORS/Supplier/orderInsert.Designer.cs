@@ -97,7 +97,8 @@
             this.orderView.Location = new System.Drawing.Point(312, 209);
             this.orderView.Name = "orderView";
             this.orderView.Size = new System.Drawing.Size(530, 195);
-            this.orderView.TabIndex = 67;          
+            this.orderView.TabIndex = 67;
+            this.orderView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orderView_CellContentClick);
             this.orderView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.orderView_RowHeaderMouseClick);
             // 
             // btnView
@@ -111,6 +112,7 @@
             this.btnView.TabIndex = 69;
             this.btnView.Text = "Order Insert";
             this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click_1);
             // 
             // btnBack
             // 
@@ -123,6 +125,7 @@
             this.btnBack.TabIndex = 68;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // panel1
             // 

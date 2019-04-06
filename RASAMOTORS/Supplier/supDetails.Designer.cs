@@ -120,7 +120,7 @@
             this.supplierView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.supplierView.Location = new System.Drawing.Point(137, 239);
             this.supplierView.Name = "supplierView";
-            this.supplierView.Size = new System.Drawing.Size(955, 332);
+            this.supplierView.Size = new System.Drawing.Size(939, 332);
             this.supplierView.TabIndex = 61;
             this.supplierView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.supplierView_CellContentClick);
             this.supplierView.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.supplierView_RowHeaderMouseClick);
@@ -136,6 +136,7 @@
             this.btnRepotr.TabIndex = 64;
             this.btnRepotr.Text = "Report";
             this.btnRepotr.UseVisualStyleBackColor = false;
+            this.btnRepotr.Click += new System.EventHandler(this.btnRepotr_Click_1);
             // 
             // btnBack
             // 
@@ -148,6 +149,7 @@
             this.btnBack.TabIndex = 63;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // btnOrder
             // 
@@ -160,6 +162,7 @@
             this.btnOrder.TabIndex = 62;
             this.btnOrder.Text = "Supplier";
             this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click_1);
             // 
             // suppliers
             // 
@@ -181,7 +184,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "suppliers";
             this.Text = " supplier Details";
-            this.Load += new System.EventHandler(this.supDetails_Load);
+            this.Load += new System.EventHandler(this.suppliers_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

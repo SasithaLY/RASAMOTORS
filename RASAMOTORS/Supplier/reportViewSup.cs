@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RASAMOTORS.Suppliers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,20 @@ namespace RASAMOTORS.Supplier
             this.supplierDetailsTableAdapter.Fill(this.supplierDataSet.supplierDetails, dateFrom.Text, dateTo.Text);
 
             this.reportViewer1.RefreshReport();
+        }
+
+        private void btnBackView_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            suppliers supplier = new suppliers();
+            supplier.ShowDialog();
+
+            this.Close();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

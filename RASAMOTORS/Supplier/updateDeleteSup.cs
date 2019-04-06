@@ -44,7 +44,7 @@ namespace RASAMOTORS.Supplier
 
         }
 
-        private void btnClear_Click_1(object sender, EventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
             //clear data
             Clear();
@@ -58,7 +58,7 @@ namespace RASAMOTORS.Supplier
 
         }
 
-        private void btnDelete_Click_1(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
             try
             {
@@ -95,7 +95,7 @@ namespace RASAMOTORS.Supplier
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -213,11 +213,13 @@ namespace RASAMOTORS.Supplier
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             suppliers supplier = new suppliers();
             supplier.ShowDialog();
         }
+
+
     }
 }

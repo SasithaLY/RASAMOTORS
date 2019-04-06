@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RASAMOTORS.Supplier.ordersClass
 {
-    class orderClass
+    public class orderClass
     {
 
         //Getters and  setters
@@ -19,7 +19,8 @@ namespace RASAMOTORS.Supplier.ordersClass
         public string inventoryType { get; set; }
         public string amount { get; set; }
 
-        static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        //static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        static string myconnstring = @"Data Source=DESKTOP-5MEEE4B\SQLEXPRESS;Initial Catalog=rasaMotors;Integrated Security=True";
 
         //Data from DataBase
 

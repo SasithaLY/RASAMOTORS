@@ -194,6 +194,7 @@
             this.btnView.TabIndex = 76;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click_1);
             // 
             // btnBack
             // 
@@ -206,6 +207,7 @@
             this.btnBack.TabIndex = 75;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnClear
             // 
@@ -218,6 +220,7 @@
             this.btnClear.TabIndex = 74;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // ordADD
             // 
@@ -230,6 +233,7 @@
             this.ordADD.TabIndex = 73;
             this.ordADD.Text = "ADD";
             this.ordADD.UseVisualStyleBackColor = false;
+            this.ordADD.Click += new System.EventHandler(this.ordADD_Click_1);
             // 
             // orderAdd
             // 
