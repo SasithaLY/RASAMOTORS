@@ -68,6 +68,12 @@
     </Compile>
     <Compile Include="JobCard\jobCardClasses\assignJobclass.cs" />
     <Compile Include="JobCard\jobCardClasses\jobCard.cs" />
+    <Compile Include="JobCard\ReceiptPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\ReceiptPrint.Designer.cs">
+      <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="JobCard\searchJob.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JobCard\createJob.resx">
       <DependentUpon>createJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\ReceiptPrint.resx">
+      <DependentUpon>ReceiptPrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JobCard\searchJob.resx">
       <DependentUpon>searchJob.cs</DependentUpon>

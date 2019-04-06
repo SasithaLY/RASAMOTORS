@@ -46,6 +46,29 @@ namespace RASAMOTORS.JobCard
 
         }
 
+        //This Loads Vehicle Numbers to the Combo box
+        public void fillVehicles()
+        {
+            cmbVno.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select V.vehiId AS 'vid',V.vehiTyp AS 'vtyp',V.vehiNo as 'vno',C.cusName as 'cnme' FROM vehicles V, customer C WHERE C.cusId=V.custId";
+            //cmd.CommandText = "select V.vehiId,V.vehiTyp,C.cusName FROM vehicles V,customer C WHERE C.cusId = V.custId";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                cmbVno.Items.Add(dr["vno"].ToString());
+            }
+
+            con.Close();
+
+        }
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             new searchJob().Show();
@@ -74,6 +97,18 @@ namespace RASAMOTORS.JobCard
                 {
                     MessageBox.Show("Job Successfully Inserted!");
                     //clear();
+                    ReceiptPrint rp = new ReceiptPrint();
+                    rp.jbId.Text =
+                    rp.vhclNo.Text = cmbVno.Text.ToString();
+                    rp.vhclTyp.Text = 
+                    rp.cusName.Text = txtCusName.Text.ToString();
+                    rp.jOne.Text = comboJone.Text.ToString();
+                    rp.jTwo.Text = comboJtwo.Text.ToString();
+                    rp.jThree.Text = comboJthree.Text.ToString();
+                    rp.prdPrc.Text = txtPdctPrc.Text.ToString();
+                    rp.Date.Text = DateTime.Now.ToString();
+                    rp.relDte.Text = DateTime.Today.AddDays(3).ToString();
+                    rp.Show();
                 }
                 else
                 {
@@ -92,6 +127,7 @@ namespace RASAMOTORS.JobCard
         private void assignJob_Load(object sender, EventArgs e)
         {
             fillcombo();
+            fillVehicles();
         }
 
         private void comboJone_SelectedIndexChanged(object sender, EventArgs e)
@@ -165,7 +201,11 @@ namespace RASAMOTORS.JobCard
 
         private void txtJTwoPrc_TextChanged(object sender, EventArgs e)
         {
-            if (comboJone.Text == comboJtwo.Text)
+            if (comboJone.Text == "")
+            {
+                MessageBox.Show("Please Select Previous Job!");
+            }
+            else if (comboJone.Text == comboJtwo.Text)
             {
                 MessageBox.Show("You have choose the same Job!");
             }
@@ -177,7 +217,11 @@ namespace RASAMOTORS.JobCard
 
         private void txtJThreePrc_TextChanged(object sender, EventArgs e)
         {
-            if (comboJone.Text == comboJtwo.Text || comboJone.Text == comboJthree.Text || comboJtwo.Text == comboJthree.Text)
+            if( comboJone.Text == "" || comboJtwo.Text == "")
+            {
+                MessageBox.Show("Please Select Previous Jobs!");
+            }
+            else if (comboJone.Text == comboJtwo.Text || comboJone.Text == comboJthree.Text || comboJtwo.Text == comboJthree.Text)
             {
                 MessageBox.Show("You have choose the same Job!");
             }
@@ -185,6 +229,36 @@ namespace RASAMOTORS.JobCard
             {
                 txtPdctPrc.Text = (float.Parse(txtJOnePrc.Text) + float.Parse(txtJTwoPrc.Text) + float.Parse(txtJThreePrc.Text)).ToString();
             }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbVno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            //select V.vehiId,V.vehiTyp,C.cusName FROM vehicles V, customer C WHERE C.cusId = V.custId
+            cmd.CommandText = "select V.vehiId AS 'vid',V.vehiTyp AS 'vtyp',C.cusName AS 'cnme' FROM vehicles V, customer C WHERE C.cusId=V.custId AND V.vehiNo='" + cmbVno.SelectedItem.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                txtCusName.Text = dr["cnme"].ToString();
+            }
+
+            con.Close();
+
         }
     }
 }

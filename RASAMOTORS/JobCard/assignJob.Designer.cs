@@ -48,6 +48,8 @@
             this.txtJOnePrc = new System.Windows.Forms.TextBox();
             this.comboJone = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtCusName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,10 +79,11 @@
             // 
             this.cmbVno.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVno.FormattingEnabled = true;
-            this.cmbVno.Location = new System.Drawing.Point(487, 213);
+            this.cmbVno.Location = new System.Drawing.Point(487, 276);
             this.cmbVno.Name = "cmbVno";
             this.cmbVno.Size = new System.Drawing.Size(121, 28);
             this.cmbVno.TabIndex = 102;
+            this.cmbVno.SelectedIndexChanged += new System.EventHandler(this.cmbVno_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -117,18 +120,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(371, 218);
+            this.label1.Location = new System.Drawing.Point(354, 279);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 99;
             this.label1.Text = "Vehicle No";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(399, 402);
+            this.label11.Location = new System.Drawing.Point(397, 521);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 20);
             this.label11.TabIndex = 98;
@@ -139,7 +143,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(398, 341);
+            this.label4.Location = new System.Drawing.Point(396, 460);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 97;
@@ -149,7 +153,7 @@
             // 
             this.comboJthree.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboJthree.FormattingEnabled = true;
-            this.comboJthree.Location = new System.Drawing.Point(489, 394);
+            this.comboJthree.Location = new System.Drawing.Point(487, 513);
             this.comboJthree.Name = "comboJthree";
             this.comboJthree.Size = new System.Drawing.Size(121, 28);
             this.comboJthree.TabIndex = 96;
@@ -159,7 +163,7 @@
             // 
             this.comboJtwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboJtwo.FormattingEnabled = true;
-            this.comboJtwo.Location = new System.Drawing.Point(489, 340);
+            this.comboJtwo.Location = new System.Drawing.Point(487, 459);
             this.comboJtwo.Name = "comboJtwo";
             this.comboJtwo.Size = new System.Drawing.Size(121, 28);
             this.comboJtwo.TabIndex = 95;
@@ -172,7 +176,7 @@
             this.btnAsJb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsJb.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsJb.ForeColor = System.Drawing.Color.White;
-            this.btnAsJb.Location = new System.Drawing.Point(843, 475);
+            this.btnAsJb.Location = new System.Drawing.Point(852, 592);
             this.btnAsJb.Name = "btnAsJb";
             this.btnAsJb.Size = new System.Drawing.Size(112, 34);
             this.btnAsJb.TabIndex = 94;
@@ -185,16 +189,17 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(558, 486);
+            this.label6.Location = new System.Drawing.Point(567, 603);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 20);
             this.label6.TabIndex = 93;
             this.label6.Text = "Total Predict Price";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtPdctPrc
             // 
             this.txtPdctPrc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPdctPrc.Location = new System.Drawing.Point(726, 483);
+            this.txtPdctPrc.Location = new System.Drawing.Point(735, 600);
             this.txtPdctPrc.Name = "txtPdctPrc";
             this.txtPdctPrc.Size = new System.Drawing.Size(100, 26);
             this.txtPdctPrc.TabIndex = 92;
@@ -204,7 +209,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(398, 278);
+            this.label5.Location = new System.Drawing.Point(396, 397);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 20);
             this.label5.TabIndex = 91;
@@ -214,7 +219,7 @@
             // 
             this.txtJThreePrc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJThreePrc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtJThreePrc.Location = new System.Drawing.Point(644, 395);
+            this.txtJThreePrc.Location = new System.Drawing.Point(642, 514);
             this.txtJThreePrc.Name = "txtJThreePrc";
             this.txtJThreePrc.Size = new System.Drawing.Size(100, 26);
             this.txtJThreePrc.TabIndex = 90;
@@ -225,7 +230,7 @@
             // 
             this.txtJTwoPrc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJTwoPrc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtJTwoPrc.Location = new System.Drawing.Point(644, 341);
+            this.txtJTwoPrc.Location = new System.Drawing.Point(642, 460);
             this.txtJTwoPrc.Name = "txtJTwoPrc";
             this.txtJTwoPrc.Size = new System.Drawing.Size(100, 26);
             this.txtJTwoPrc.TabIndex = 89;
@@ -236,7 +241,7 @@
             // 
             this.txtJOnePrc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJOnePrc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtJOnePrc.Location = new System.Drawing.Point(644, 280);
+            this.txtJOnePrc.Location = new System.Drawing.Point(642, 399);
             this.txtJOnePrc.Name = "txtJOnePrc";
             this.txtJOnePrc.Size = new System.Drawing.Size(100, 26);
             this.txtJOnePrc.TabIndex = 88;
@@ -247,7 +252,7 @@
             // 
             this.comboJone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboJone.FormattingEnabled = true;
-            this.comboJone.Location = new System.Drawing.Point(489, 280);
+            this.comboJone.Location = new System.Drawing.Point(487, 399);
             this.comboJone.Name = "comboJone";
             this.comboJone.Size = new System.Drawing.Size(121, 28);
             this.comboJone.TabIndex = 87;
@@ -264,12 +269,35 @@
             this.pictureBox1.TabIndex = 104;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(313, 339);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 20);
+            this.label2.TabIndex = 106;
+            this.label2.Text = "Customer Name";
+            // 
+            // txtCusName
+            // 
+            this.txtCusName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCusName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtCusName.Location = new System.Drawing.Point(487, 334);
+            this.txtCusName.Multiline = true;
+            this.txtCusName.Name = "txtCusName";
+            this.txtCusName.Size = new System.Drawing.Size(121, 26);
+            this.txtCusName.TabIndex = 107;
+            // 
             // assignJob
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1334, 688);
+            this.Controls.Add(this.txtCusName);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.heading);
@@ -320,5 +348,7 @@
         private System.Windows.Forms.TextBox txtJTwoPrc;
         private System.Windows.Forms.TextBox txtJOnePrc;
         private System.Windows.Forms.ComboBox comboJone;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtCusName;
     }
 }
