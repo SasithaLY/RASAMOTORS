@@ -31,13 +31,6 @@ namespace RASAMOTORS.Inventory
         Item i = new Item();
 
        
-        private void btnReport_Click(object sender, EventArgs e)
-        {
-            //ItemsReport itemsReport = new ItemsReport();
-            //itemsReport.Show();
-        }
-
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             InventoryForm inventoryForm = new InventoryForm();
@@ -173,6 +166,12 @@ namespace RASAMOTORS.Inventory
                 txtBoxSearch.Text = "Search by Name , Type , Supplier Company";
                 txtBoxSearch.ForeColor = Color.Silver;
             }
+        }
+
+        private void btnReport_Click_1(object sender, EventArgs e)
+        {
+            ItemsReport itemsReport = new ItemsReport();
+            itemsReport.Show();
         }
     }
 }

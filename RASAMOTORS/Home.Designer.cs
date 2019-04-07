@@ -38,7 +38,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnInventory = new System.Windows.Forms.Button();
             this.payBtn = new System.Windows.Forms.Button();
             this.cusBtn = new System.Windows.Forms.Button();
             this.jobBtn = new System.Windows.Forms.Button();
@@ -109,7 +109,7 @@
             this.pnlMenu.Controls.Add(this.button5);
             this.pnlMenu.Controls.Add(this.button4);
             this.pnlMenu.Controls.Add(this.button3);
-            this.pnlMenu.Controls.Add(this.button2);
+            this.pnlMenu.Controls.Add(this.btnInventory);
             this.pnlMenu.Controls.Add(this.payBtn);
             this.pnlMenu.Controls.Add(this.cusBtn);
             this.pnlMenu.Controls.Add(this.jobBtn);
@@ -206,25 +206,25 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btnInventory
             // 
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::RASAMOTORS.Properties.Resources.Inventory_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 459);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 52);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Inventory";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnInventory.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnInventory.FlatAppearance.BorderSize = 0;
+            this.btnInventory.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnInventory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnInventory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventory.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventory.ForeColor = System.Drawing.Color.White;
+            this.btnInventory.Image = global::RASAMOTORS.Properties.Resources.Inventory_icon;
+            this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventory.Location = new System.Drawing.Point(12, 459);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(250, 52);
+            this.btnInventory.TabIndex = 7;
+            this.btnInventory.Text = "Inventory";
+            this.btnInventory.UseVisualStyleBackColor = true;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // payBtn
             // 
@@ -357,7 +357,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button payBtn;
         private System.Windows.Forms.Button cusBtn;

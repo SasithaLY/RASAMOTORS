@@ -258,6 +258,7 @@
             this.supEmail.Size = new System.Drawing.Size(53, 18);
             this.supEmail.TabIndex = 59;
             this.supEmail.Text = "Email:";
+
             // 
             // panel1
             // 
@@ -284,7 +285,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.Maroon;
-            this.btnClear.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(421, 606);
             this.btnClear.Name = "btnClear";
@@ -297,7 +298,7 @@
             // btnOrder
             // 
             this.btnOrder.BackColor = System.Drawing.Color.Maroon;
-            this.btnOrder.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.ForeColor = System.Drawing.Color.White;
             this.btnOrder.Location = new System.Drawing.Point(740, 603);
             this.btnOrder.Name = "btnOrder";
@@ -310,7 +311,7 @@
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.Maroon;
-            this.btnBack.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(884, 603);
             this.btnBack.Name = "btnBack";
@@ -323,7 +324,7 @@
             // btnADD
             // 
             this.btnADD.BackColor = System.Drawing.Color.Maroon;
-            this.btnADD.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADD.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnADD.ForeColor = System.Drawing.Color.White;
             this.btnADD.Location = new System.Drawing.Point(318, 606);
             this.btnADD.Name = "btnADD";

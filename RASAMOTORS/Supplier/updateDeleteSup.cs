@@ -201,7 +201,7 @@ namespace RASAMOTORS.Supplier
 
         }
 
-        static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        string myconnstring = Common.Utils.ConnectionString;
 
         private void supplierView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

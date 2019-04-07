@@ -166,7 +166,7 @@ namespace RASAMOTORS.Supplier
             }
         }
 
-        static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        string myconnstring = Common.Utils.ConnectionString;
 
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -149,7 +149,7 @@ namespace RASAMOTORS.Supplier
             Clear();
         }
 
-        static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        string myconnstring = Common.Utils.ConnectionString;
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
@@ -184,6 +184,6 @@ namespace RASAMOTORS.Supplier
             // DataTable dt = c.Select();
         }
 
-
+      
     }
 }

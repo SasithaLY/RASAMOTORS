@@ -21,7 +21,7 @@ namespace RASAMOTORS.Suppliers
             InitializeComponent();
         }
 
-        public supplierClass c = new supplierClass();
+        supplierClass c = new supplierClass();
 
         
 
@@ -51,11 +51,8 @@ namespace RASAMOTORS.Suppliers
         {
             this.Hide();
             supplieInsert supplier = new supplieInsert();
-            supplier.ShowDialog();
-
+            supplier.Show();
             this.Close();
-
-
         }
 
 
@@ -63,11 +60,10 @@ namespace RASAMOTORS.Suppliers
         {
             //Lord data dgv
             DataTable dt = c.Select();
-
             supplierView.DataSource = dt;
         }
 
-        static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        string myconnstring = Common.Utils.ConnectionString;
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {

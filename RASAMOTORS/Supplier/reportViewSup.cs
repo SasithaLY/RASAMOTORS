@@ -36,7 +36,6 @@ namespace RASAMOTORS.Supplier
             this.Hide();
             suppliers supplier = new suppliers();
             supplier.ShowDialog();
-
             this.Close();
         }
 

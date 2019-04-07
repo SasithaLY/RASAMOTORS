@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RASAMOTORS.Suppliers.suppliersClass
 {
-    public class supplierClass
+    class supplierClass
     {
         //Getters and  setters
         public int supplierID { get; set; }
@@ -24,7 +24,7 @@ namespace RASAMOTORS.Suppliers.suppliersClass
 
 
         //static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
-        static string myconnstring = @"Data Source=DESKTOP-5MEEE4B\SQLEXPRESS;Initial Catalog=rasaMotors;Integrated Security=True";
+        string myconnstring = Common.Utils.ConnectionString;
 
         //Select Data from DataBase
 

@@ -4,5 +4,8 @@
 
     partial class supplierDataSet
     {
+        partial class supplierDetailsDataTable
+        {
+        }
     }
 }

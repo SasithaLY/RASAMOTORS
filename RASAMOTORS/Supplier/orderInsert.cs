@@ -46,7 +46,7 @@ namespace RASAMOTORS.Supplier
         }
 
 
-        static string myconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
+        string myconnstring = Common.Utils.ConnectionString;
         private void txtSearch_TextChanged_1(object sender, EventArgs e)
         {
             //search the data
