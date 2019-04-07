@@ -31,7 +31,7 @@ namespace RASAMOTORS
 
         private void jobBtn_Click(object sender, EventArgs e)
         {
-            new JobCard.searchJob().Show();
+            new JobCard.createJob().Show();
         }
 
         private void btnInventory_Click(object sender, EventArgs e)

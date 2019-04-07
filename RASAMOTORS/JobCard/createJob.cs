@@ -55,15 +55,6 @@ namespace RASAMOTORS.JobCard
             return val;
         }
 
-        public void clear()//clear method to empty the text fields
-        {
-            txtName.Text = "";
-            txtPrc.Text = "";
-            txtDesc.Text = "";
-
-        }
-
-
         private void btnInsert_Click(object sender, EventArgs e)
         {
             try
@@ -103,62 +94,6 @@ namespace RASAMOTORS.JobCard
         {
             DataTable dt = c.Select();
             dgvallJobs.DataSource = dt;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new assignJob().Show();
-            this.Close();
-        }
-
-        private void dgvallJobs_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            //Get data from Grid view into Text Boxes
-            //Identify the Row on which mouse is clicked
-            int rowIndex = e.RowIndex;
-            txtId.Text = dgvallJobs.Rows[rowIndex].Cells[0].Value.ToString();
-            txtName.Text = dgvallJobs.Rows[rowIndex].Cells[1].Value.ToString();
-            txtPrc.Text = dgvallJobs.Rows[rowIndex].Cells[2].Value.ToString();
-            txtDesc.Text = dgvallJobs.Rows[rowIndex].Cells[3].Value.ToString();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //Get data from textbox
-                c.Id = int.Parse(txtId.Text);
-                c.Name = txtName.Text;
-                c.Price = float.Parse(txtPrc.Text);
-                c.Description = txtDesc.Text;
-
-
-                //update in database
-                bool success = c.Update(c);
-                if (success == true)
-                {
-                    MessageBox.Show("Successfully Updated!");
-                    //Clear Fields
-                    clear();
-                    //update grid view
-                    DataTable dt = c.Select();
-                    dgvallJobs.DataSource = dt;
-                }
-                else
-                {
-                    MessageBox.Show("Update Unsuccessful!");
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }
