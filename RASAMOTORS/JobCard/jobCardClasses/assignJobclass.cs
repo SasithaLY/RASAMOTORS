@@ -30,7 +30,9 @@ namespace RASAMOTORS.JobCard.jobCardClasses
         public string jobStatus { get; set; }
 
         //static string mynewconnstring = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString;
-        static string mynewconnstring = @"Data Source=CHARMINPC\SQLEXPRESS;Initial Catalog=ServiceCenter;Integrated Security=True";
+        //static string mynewconnstring = @"Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True";
+
+        string mynewconnstring = Common.Utils.ConnectionString;
 
         //selecting Data from database
         public DataTable Select()
