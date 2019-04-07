@@ -39,5 +39,11 @@ namespace RASAMOTORS
             InventoryView inventory = new InventoryView();
             inventory.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Employees.ViewEmployee viewEmployee = new Employees.ViewEmployee();
+            viewEmployee.Show();
+        }
     }
 }
