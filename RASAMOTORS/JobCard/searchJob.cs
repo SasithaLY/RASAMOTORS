@@ -19,8 +19,8 @@ namespace RASAMOTORS.JobCard
             InitializeComponent();
         }
 
-        public assignJobclass c = new assignJobclass();
-        static string myconnstring = @"Data Source=CHARMINPC\SQLEXPRESS;Initial Catalog=ServiceCenter;Integrated Security=True";
+        assignJobclass c = new assignJobclass();
+        string myconnstring = Common.Utils.ConnectionString;
 
         private void searchJob_Load(object sender, EventArgs e)
         {

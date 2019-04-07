@@ -19,7 +19,7 @@ namespace RASAMOTORS.JobCard
             InitializeComponent();
         }
 
-        public jobCard c = new jobCard();
+        jobCard c = new jobCard();
 
         public Boolean validate()
         {

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace RASAMOTORS.JobCard.jobCardClasses
 {
-    public class jobCard
+    class jobCard
     {
         //getter setter properties
         public int Id { get; set; }
