@@ -69,6 +69,25 @@
   <ItemGroup>
     <Compile Include="Common\DBConnect.cs" />
     <Compile Include="Common\Utils.cs" />
+    <Compile Include="Employees\employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\employee.Designer.cs">
+      <DependentUpon>employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\EmployeeClasses\EmployeeClass.cs" />
+    <Compile Include="Employees\employeeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\employeeUpdate.Designer.cs">
+      <DependentUpon>employeeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employees\ViewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\ViewEmployee.Designer.cs">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +195,15 @@
     <Compile Include="Supplier\updateDeleteSup.Designer.cs">
       <DependentUpon>updateDeleteSup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Employees\employee.resx">
+      <DependentUpon>employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\employeeUpdate.resx">
+      <DependentUpon>employeeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\ViewEmployee.resx">
+      <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -295,7 +323,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomerVehicles\" />
-    <Folder Include="Employees\" />
     <Folder Include="Finance\" />
     <Folder Include="Payments\" />
     <Folder Include="Salary\" />
