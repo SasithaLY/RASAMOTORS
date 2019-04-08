@@ -124,5 +124,12 @@ namespace RASAMOTORS.Employees
             DataTable dt = emp.Select();
             datagridViewEmployee.DataSource = dt;
         }
+
+        private void buttonReport_Click(object sender, EventArgs e)
+        {
+            EmployeeReport report = new EmployeeReport();
+            report.Show();
+            
+        }
     }
 }

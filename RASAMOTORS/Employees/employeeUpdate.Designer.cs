@@ -97,7 +97,7 @@
             this.jobinfo.BackColor = System.Drawing.Color.Maroon;
             this.jobinfo.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jobinfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.jobinfo.Location = new System.Drawing.Point(803, 561);
+            this.jobinfo.Location = new System.Drawing.Point(781, 561);
             this.jobinfo.Name = "jobinfo";
             this.jobinfo.Size = new System.Drawing.Size(197, 29);
             this.jobinfo.TabIndex = 101;
@@ -109,7 +109,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(786, 7);
+            this.label9.Location = new System.Drawing.Point(765, 7);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label9.Size = new System.Drawing.Size(206, 29);
@@ -123,7 +123,7 @@
             this.heading.AutoSize = true;
             this.heading.Font = new System.Drawing.Font("Rockwell", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heading.ForeColor = System.Drawing.Color.White;
-            this.heading.Location = new System.Drawing.Point(523, 40);
+            this.heading.Location = new System.Drawing.Point(501, 40);
             this.heading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.heading.Name = "heading";
             this.heading.Size = new System.Drawing.Size(688, 91);
@@ -164,7 +164,7 @@
             this.jobinformation.Location = new System.Drawing.Point(-9, 559);
             this.jobinformation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.jobinformation.Name = "jobinformation";
-            this.jobinformation.Size = new System.Drawing.Size(1796, 41);
+            this.jobinformation.Size = new System.Drawing.Size(1754, 41);
             this.jobinformation.TabIndex = 127;
             // 
             // empId
@@ -225,7 +225,7 @@
             this.panel2.Location = new System.Drawing.Point(-9, 835);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1819, 51);
+            this.panel2.Size = new System.Drawing.Size(1777, 51);
             this.panel2.TabIndex = 130;
             // 
             // label16
@@ -235,7 +235,7 @@
             this.label16.BackColor = System.Drawing.Color.Maroon;
             this.label16.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(756, 11);
+            this.label16.Location = new System.Drawing.Point(735, 11);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(394, 29);
@@ -404,7 +404,7 @@
             this.panel1.Location = new System.Drawing.Point(-9, 163);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1767, 49);
+            this.panel1.Size = new System.Drawing.Size(1725, 49);
             this.panel1.TabIndex = 122;
             // 
             // btnDelete
