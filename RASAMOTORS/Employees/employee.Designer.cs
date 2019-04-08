@@ -99,7 +99,7 @@
             this.heading.AutoSize = true;
             this.heading.Font = new System.Drawing.Font("Rockwell", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heading.ForeColor = System.Drawing.Color.White;
-            this.heading.Location = new System.Drawing.Point(507, 41);
+            this.heading.Location = new System.Drawing.Point(499, 41);
             this.heading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.heading.Name = "heading";
             this.heading.Size = new System.Drawing.Size(758, 91);
@@ -300,7 +300,7 @@
             this.panel2.Location = new System.Drawing.Point(-16, 1063);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1839, 38);
+            this.panel2.Size = new System.Drawing.Size(1823, 38);
             this.panel2.TabIndex = 114;
             // 
             // empSalary
@@ -335,7 +335,7 @@
             this.jobinformation.Location = new System.Drawing.Point(-16, 694);
             this.jobinformation.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.jobinformation.Name = "jobinformation";
-            this.jobinformation.Size = new System.Drawing.Size(1839, 42);
+            this.jobinformation.Size = new System.Drawing.Size(1823, 42);
             this.jobinformation.TabIndex = 111;
             // 
             // empId
@@ -402,7 +402,7 @@
             this.panel1.Location = new System.Drawing.Point(-16, 199);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1872, 43);
+            this.panel1.Size = new System.Drawing.Size(1856, 43);
             this.panel1.TabIndex = 106;
             // 
             // personaldetails
