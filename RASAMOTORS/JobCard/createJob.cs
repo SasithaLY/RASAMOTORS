@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +19,9 @@ namespace RASAMOTORS.JobCard
             InitializeComponent();
         }
 
-       jobCard c = new jobCard();
+
+        jobCard c = new jobCard();
+
 
         public Boolean validate()
         {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +20,15 @@ namespace RASAMOTORS.JobCard
         }
 
         assignJobclass c = new assignJobclass();
-        static string myconnstring = RASAMOTORS.Common.Utils.ConnectionString;
+
+        string myconnstring = Common.Utils.ConnectionString;
+
+        private void searchJob_Load(object sender, EventArgs e)
+        {
+            DataTable dt = c.Select();
+            dgvAllJobs.DataSource = dt;
+        }
+
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
