@@ -184,6 +184,40 @@ namespace RASAMOTORS.Supplier
             // DataTable dt = c.Select();
         }
 
+        private void txtFName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFName.Text == "")
+            {
+                labFirstName.Visible = false;
+            }
 
+            else if (!Regex.IsMatch(txtFName.Text, "^[a-zA-Z][a-zA-Z\\s]+$"))
+            {
+                labFirstName.Visible = true;
+            }
+
+            else
+            {
+                labFirstName.Visible = false;
+            }
+        }
+
+        private void txtLName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtLName.Text == "")
+            {
+                labLastName.Visible = false;
+            }
+
+            else if (!Regex.IsMatch(txtLName.Text, "^[a-zA-Z][a-zA-Z\\s]+$"))
+            {
+                labLastName.Visible = true;
+            }
+
+            else
+            {
+                labLastName.Visible = false;
+            }
+        }
     }
 }

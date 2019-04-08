@@ -53,6 +53,8 @@
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnADD = new System.Windows.Forms.Button();
+            this.labFirstName = new System.Windows.Forms.Label();
+            this.labLastName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -137,6 +139,7 @@
             this.txtLName.Name = "txtLName";
             this.txtLName.Size = new System.Drawing.Size(148, 26);
             this.txtLName.TabIndex = 70;
+            this.txtLName.TextChanged += new System.EventHandler(this.txtLName_TextChanged);
             // 
             // supLName
             // 
@@ -202,6 +205,7 @@
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(148, 26);
             this.txtFName.TabIndex = 64;
+            this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
             // 
             // supFName
             // 
@@ -333,12 +337,40 @@
             this.btnADD.UseVisualStyleBackColor = false;
             this.btnADD.Click += new System.EventHandler(this.btnADD_Click);
             // 
+            // labFirstName
+            // 
+            this.labFirstName.AutoSize = true;
+            this.labFirstName.BackColor = System.Drawing.Color.Maroon;
+            this.labFirstName.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labFirstName.ForeColor = System.Drawing.Color.White;
+            this.labFirstName.Location = new System.Drawing.Point(792, 206);
+            this.labFirstName.Name = "labFirstName";
+            this.labFirstName.Size = new System.Drawing.Size(123, 20);
+            this.labFirstName.TabIndex = 80;
+            this.labFirstName.Text = "Invalid Input";
+            this.labFirstName.Visible = false;
+            // 
+            // labLastName
+            // 
+            this.labLastName.AutoSize = true;
+            this.labLastName.BackColor = System.Drawing.Color.Maroon;
+            this.labLastName.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLastName.ForeColor = System.Drawing.Color.White;
+            this.labLastName.Location = new System.Drawing.Point(792, 259);
+            this.labLastName.Name = "labLastName";
+            this.labLastName.Size = new System.Drawing.Size(123, 20);
+            this.labLastName.TabIndex = 81;
+            this.labLastName.Text = "Invalid Input";
+            this.labLastName.Visible = false;
+            // 
             // supplieInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1031, 732);
+            this.Controls.Add(this.labLastName);
+            this.Controls.Add(this.labFirstName);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.btnBack);
@@ -398,5 +430,7 @@
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnADD;
+        private System.Windows.Forms.Label labFirstName;
+        private System.Windows.Forms.Label labLastName;
     }
 }
