@@ -9,7 +9,7 @@ using RASAMOTORS.JobCard.common;
 
 namespace RASAMOTORS.JobCard.jobCardClasses
 {
-    public class assignJobclass
+    class assignJobclass
     {
 
         //assign getters and setters

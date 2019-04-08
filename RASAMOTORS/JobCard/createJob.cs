@@ -19,7 +19,7 @@ namespace RASAMOTORS.JobCard
             InitializeComponent();
         }
 
-        public jobCard c = new jobCard();
+       jobCard c = new jobCard();
 
         public Boolean validate()
         {
@@ -94,6 +94,11 @@ namespace RASAMOTORS.JobCard
         {
             DataTable dt = c.Select();
             dgvallJobs.DataSource = dt;
+        }
+
+        private void txtDesc_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
