@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +20,7 @@ namespace RASAMOTORS.JobCard
         }
 
         assignJobclass c = new assignJobclass();
+
         string myconnstring = Common.Utils.ConnectionString;
 
         private void searchJob_Load(object sender, EventArgs e)
@@ -48,10 +49,39 @@ namespace RASAMOTORS.JobCard
             this.Close();
         }
 
+
+
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
             DataTable dt = c.Select();
             dgvAllJobs.DataSource = dt;
+        }
+
+        private void dgvAllJobs_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+                updateStatus us = new updateStatus();
+                us.txtUJid.Text = this.dgvAllJobs.CurrentRow.Cells[0].Value.ToString();
+                us.txtUVhcl.Text = this.dgvAllJobs.CurrentRow.Cells[1].Value.ToString();
+                us.txtUJone.Text = this.dgvAllJobs.CurrentRow.Cells[2].Value.ToString();
+                us.txtUJTwo.Text = this.dgvAllJobs.CurrentRow.Cells[3].Value.ToString();
+                us.txtUJThree.Text = this.dgvAllJobs.CurrentRow.Cells[4].Value.ToString();
+                us.txtUPrc.Text = this.dgvAllJobs.CurrentRow.Cells[5].Value.ToString();
+                us.cmbStatus.Text = this.dgvAllJobs.CurrentRow.Cells[6].Value.ToString();
+                us.txtDate.Text = this.dgvAllJobs.CurrentRow.Cells[7].Value.ToString();
+                us.ShowDialog();
+                this.Close();
+        }
+
+        private void searchJob_Load(object sender, EventArgs e)
+        {
+            DataTable dt = c.Select();
+            dgvAllJobs.DataSource = dt;
+        }
+
+        private void btnNJob_Click(object sender, EventArgs e)
+        {
+            new assignJob().Show();
+            this.Close();
         }
     }
 }
