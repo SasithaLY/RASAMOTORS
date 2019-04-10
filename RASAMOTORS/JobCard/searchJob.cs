@@ -72,11 +72,11 @@ namespace RASAMOTORS.JobCard
                 this.Close();
         }
 
-        private void searchJob_Load(object sender, EventArgs e)
-        {
-            DataTable dt = c.Select();
-            dgvAllJobs.DataSource = dt;
-        }
+        //private void searchJob_Load(object sender, EventArgs e)
+        //{
+        //    DataTable dt = c.Select();
+        //    dgvAllJobs.DataSource = dt;
+        //}
 
         private void btnNJob_Click(object sender, EventArgs e)
         {

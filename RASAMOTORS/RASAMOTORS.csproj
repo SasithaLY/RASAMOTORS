@@ -102,6 +102,19 @@
     <Compile Include="Employees\ViewEmployee.Designer.cs">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finance\calculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\calculation.Designer.cs">
+      <DependentUpon>calculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\financialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\financialView.Designer.cs">
+      <DependentUpon>financialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\serviceCenterClasses\netProfit.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -239,6 +252,12 @@
     <EmbeddedResource Include="Employees\EmpReport.rdlc" />
     <EmbeddedResource Include="Employees\ViewEmployee.resx">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\calculation.resx">
+      <DependentUpon>calculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financialView.resx">
+      <DependentUpon>financialView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -379,7 +398,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomerVehicles\" />
-    <Folder Include="Finance\" />
     <Folder Include="Payments\" />
     <Folder Include="Salary\" />
   </ItemGroup>
