@@ -72,6 +72,7 @@
             this.button1.TabIndex = 58;
             this.button1.Text = "BACK";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -127,6 +128,7 @@
             this.txtSrch.Name = "txtSrch";
             this.txtSrch.Size = new System.Drawing.Size(269, 20);
             this.txtSrch.TabIndex = 54;
+            this.txtSrch.TextChanged += new System.EventHandler(this.txtSrch_TextChanged);
             // 
             // label4
             // 
@@ -146,6 +148,7 @@
             this.dgvallJobs.Name = "dgvallJobs";
             this.dgvallJobs.Size = new System.Drawing.Size(330, 154);
             this.dgvallJobs.TabIndex = 52;
+            this.dgvallJobs.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvallJobs_RowHeaderMouseClick);
             // 
             // button3
             // 
@@ -170,6 +173,7 @@
             this.btnUpdate.TabIndex = 50;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 

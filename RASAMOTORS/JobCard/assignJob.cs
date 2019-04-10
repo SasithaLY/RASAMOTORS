@@ -232,6 +232,7 @@ namespace RASAMOTORS.JobCard
                     rp.Date.Text = DateTime.Now.ToString();
                     rp.relDte.Text = DateTime.Today.AddDays(3).ToString();
                     rp.Show();
+                   
                 }
                 else
                 {
