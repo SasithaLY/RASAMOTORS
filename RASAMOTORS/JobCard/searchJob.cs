@@ -79,5 +79,10 @@ namespace RASAMOTORS.JobCard
             new assignJob().Show();
             this.Close();
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            new Report().Show();
+        }
     }
 }

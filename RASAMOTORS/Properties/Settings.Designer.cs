@@ -26,11 +26,22 @@ namespace RASAMOTORS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-5MEEE4B\\SQLEXPRESS;Initial Catalog=rasaMotors;Integrated Secu" +
-            "rity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated " +
+            "Security=True")]
         public string rasaMotorsConnectionString {
             get {
                 return ((string)(this["rasaMotorsConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHARMINPC\\SQLEXPRESS;Initial Catalog=ServiceCenterManagementDB;Integr" +
+            "ated Security=True")]
+        public string ServiceCenterManagementDBConnectionString {
+            get {
+                return ((string)(this["ServiceCenterManagementDBConnectionString"]));
             }
         }
     }

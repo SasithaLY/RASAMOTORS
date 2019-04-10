@@ -200,5 +200,34 @@ namespace RASAMOTORS.JobCard
         {
             this.Close();
         }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                c.Id = Convert.ToInt32(txtId.Text);
+
+
+                if (DialogResult.Yes == MessageBox.Show("Are you sure you want to remove this item?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information))
+                {
+
+                    bool success = c.Delete(c);
+                    if (success == true)
+                    {
+                        MessageBox.Show("Item Deleted Successfully!");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Item Delete Failed!");
+                    }
+
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
     }
 }
