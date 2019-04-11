@@ -108,11 +108,28 @@
     <Compile Include="Finance\calculation.Designer.cs">
       <DependentUpon>calculation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finance\financeUpDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\financeUpDel.Designer.cs">
+      <DependentUpon>financeUpDel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Finance\financialView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Finance\financialView.Designer.cs">
       <DependentUpon>financialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\profitData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>profitData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\reportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\reportViewer.Designer.cs">
+      <DependentUpon>reportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Finance\serviceCenterClasses\netProfit.cs" />
     <Compile Include="Home.cs">
@@ -267,8 +284,15 @@
     <EmbeddedResource Include="Finance\calculation.resx">
       <DependentUpon>calculation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financeReport.rdlc" />
+    <EmbeddedResource Include="Finance\financeUpDel.resx">
+      <DependentUpon>financeUpDel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Finance\financialView.resx">
       <DependentUpon>financialView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\reportViewer.resx">
+      <DependentUpon>reportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -347,6 +371,17 @@
     </None>
     <None Include="Employees\EmployeeDataSet.xss">
       <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Finance\profitData.xsc">
+      <DependentUpon>profitData.xsd</DependentUpon>
+    </None>
+    <None Include="Finance\profitData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>profitData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Finance\profitData.xss">
+      <DependentUpon>profitData.xsd</DependentUpon>
     </None>
     <None Include="Inventory\InventoryData.xsc">
       <DependentUpon>InventoryData.xsd</DependentUpon>
