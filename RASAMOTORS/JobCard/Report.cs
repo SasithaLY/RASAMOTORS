@@ -20,6 +20,8 @@ namespace RASAMOTORS.JobCard
 
         private void Report_Load(object sender, EventArgs e)
         {
+           
+
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -27,6 +29,7 @@ namespace RASAMOTORS.JobCard
             // TODO: This line of code loads data into the 'jobCardDS.jobPred' table. You can move, or remove it, as needed.
             this.jobPredTableAdapter.Fill(this.jobCardDS.jobPred, Convert.ToDateTime(dtFrm.Text), Convert.ToDateTime(dtTo.Text));
             this.reportViewer1.RefreshReport();
+
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)

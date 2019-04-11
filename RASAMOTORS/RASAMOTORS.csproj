@@ -166,6 +166,9 @@
     </Compile>
     <Compile Include="JobCard\jobCardClasses\assignJobclass.cs" />
     <Compile Include="JobCard\jobCardClasses\jobCard.cs" />
+    <Compile Include="JobCard\jobCardDS.cs">
+      <DependentUpon>jobCardDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="JobCard\jobCardDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -292,7 +295,7 @@
     <EmbeddedResource Include="JobCard\createJob.resx">
       <DependentUpon>createJob.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JobCard\JobReport.rdlc" />
+    <EmbeddedResource Include="JobCard\jobCardDS.rdlc" />
     <EmbeddedResource Include="JobCard\ReceiptPrint.resx">
       <DependentUpon>ReceiptPrint.cs</DependentUpon>
     </EmbeddedResource>

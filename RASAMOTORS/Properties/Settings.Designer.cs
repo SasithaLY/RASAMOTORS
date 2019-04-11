@@ -37,15 +37,22 @@ namespace RASAMOTORS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-
-       // [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHARMINPC\\SQLEXPRESS;Initial Catalog=ServiceCenterManagementDB;Integr" +
-         //   "ated Security=True")]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HEN8CVM;Initial Catalog=ServiceCenterManagementDB;Integrated " +
             "Security=True")]
-
         public string ServiceCenterManagementDBConnectionString {
             get {
                 return ((string)(this["ServiceCenterManagementDBConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CHARMINPC\\SQLEXPRESS;Initial Catalog=ServiceCenterManagementDB;Integr" +
+            "ated Security=True")]
+        public string ServiceCenterManagementDBConnectionString1 {
+            get {
+                return ((string)(this["ServiceCenterManagementDBConnectionString1"]));
             }
         }
     }

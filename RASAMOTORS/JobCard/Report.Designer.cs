@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.jobPredBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.jobCardDS = new RASAMOTORS.JobCard.jobCardDS();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,32 +39,24 @@
             this.dtFrm = new System.Windows.Forms.DateTimePicker();
             this.dtTo = new System.Windows.Forms.DateTimePicker();
             this.btnLoad = new System.Windows.Forms.Button();
+            this.jobPredBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jobCardDS = new RASAMOTORS.JobCard.jobCardDS();
             this.jobPredTableAdapter = new RASAMOTORS.JobCard.jobCardDSTableAdapters.jobPredTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobPredBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobCardDS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // jobPredBindingSource
-            // 
-            this.jobPredBindingSource.DataMember = "jobPred";
-            this.jobPredBindingSource.DataSource = this.jobCardDS;
-            // 
-            // jobCardDS
-            // 
-            this.jobCardDS.DataSetName = "jobCardDS";
-            this.jobCardDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             reportDataSource1.Name = "jobCardDS";
             reportDataSource1.Value = this.jobPredBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "RASAMOTORS.JobCard.JobReport.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "RASAMOTORS.JobCard.jobCardDS.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(22, 168);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(953, 414);
+            this.reportViewer1.Size = new System.Drawing.Size(996, 506);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
@@ -109,7 +99,7 @@
             this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Location = new System.Drawing.Point(-1, 112);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 12);
+            this.panel1.Size = new System.Drawing.Size(1033, 12);
             this.panel1.TabIndex = 4;
             // 
             // label3
@@ -150,6 +140,16 @@
             this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
+            // jobPredBindingSource
+            // 
+            this.jobPredBindingSource.DataMember = "jobPred";
+            this.jobPredBindingSource.DataSource = this.jobCardDS;
+            // 
+            // jobCardDS
+            // 
+            this.jobCardDS.DataSetName = "jobCardDS";
+            this.jobCardDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // jobPredTableAdapter
             // 
             this.jobPredTableAdapter.ClearBeforeFill = true;
@@ -159,7 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(66)))));
-            this.ClientSize = new System.Drawing.Size(917, 476);
+            this.ClientSize = new System.Drawing.Size(1030, 686);
             this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.dtTo);
             this.Controls.Add(this.dtFrm);
@@ -172,9 +172,9 @@
             this.Name = "Report";
             this.Text = "Report";
             this.Load += new System.EventHandler(this.Report_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobPredBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jobCardDS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +194,7 @@
         private System.Windows.Forms.BindingSource jobPredBindingSource;
         private jobCardDS jobCardDS;
         private jobCardDSTableAdapters.jobPredTableAdapter jobPredTableAdapter;
+        //  private jobCardDS jobCardDS;
+        //  private jobCardDSTableAdapters.jobPredTableAdapter jobPredTableAdapter;
     }
 }

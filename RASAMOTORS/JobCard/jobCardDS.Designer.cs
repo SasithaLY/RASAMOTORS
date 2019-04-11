@@ -1092,7 +1092,7 @@ SELECT Id, vehicleNo, jobOne, jobTwo, jobThree, predictPrice, jobStatus, date FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::RASAMOTORS.Properties.Settings.Default.ServiceCenterManagementDBConnectionString;
+            this._connection.ConnectionString = global::RASAMOTORS.Properties.Settings.Default.ServiceCenterManagementDBConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1102,7 +1102,7 @@ SELECT Id, vehicleNo, jobOne, jobTwo, jobThree, predictPrice, jobStatus, date FR
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        Id, vehicleNo, jobOne, jobTwo, jobThree, predictPrice, jobStatus, d" +
-                "ate\r\nFROM            jobPred WHERE date between @FROM and @TO ";
+                "ate\r\nFROM            jobPred WHERE date BETWEEN @FROM AND @TO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FROM", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TO", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 0, 0, "date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
