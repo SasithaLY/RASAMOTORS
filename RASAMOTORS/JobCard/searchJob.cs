@@ -38,7 +38,7 @@ namespace RASAMOTORS.JobCard
 
             SqlConnection conn = new SqlConnection(myconnstring);
 
-            SqlDataAdapter cda = new SqlDataAdapter("Select * From jobPred WHERE vehicleNo LIKE '%" + searchword + "%' OR Id LIKE '%" + searchword + "%'", conn);
+            SqlDataAdapter cda = new SqlDataAdapter("Select * From jobPred WHERE jobOne LIKE '%" + searchword + "%' OR Id LIKE '%" + searchword + "%'", conn);
             DataTable dt = new DataTable();
             cda.Fill(dt);
             dgvAllJobs.DataSource = dt;
@@ -72,16 +72,16 @@ namespace RASAMOTORS.JobCard
                 this.Close();
         }
 
-        //private void searchJob_Load(object sender, EventArgs e)
-        //{
-        //    DataTable dt = c.Select();
-        //    dgvAllJobs.DataSource = dt;
-        //}
 
         private void btnNJob_Click(object sender, EventArgs e)
         {
             new assignJob().Show();
             this.Close();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            new Report().Show();
         }
     }
 }
