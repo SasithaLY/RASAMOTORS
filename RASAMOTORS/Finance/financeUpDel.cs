@@ -87,5 +87,31 @@ namespace RASAMOTORS.Finance
             new financialView().Show();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                c.CustomerId = Convert.ToInt32(txtID.Text);
+
+                if(DialogResult.Yes==MessageBox.Show("Are you sure you want to remove this item?","Confirm",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Information))
+                {
+                    bool success = c.Delete(c);
+
+                    if (success == true)
+                    {
+                        MessageBox.Show("Successfully Delted!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Delete Unsuccessful!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No details to delete!!!");
+            }
+        }
     }
 }

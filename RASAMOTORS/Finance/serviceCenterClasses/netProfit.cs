@@ -14,8 +14,8 @@ namespace RASAMOTORS.Finance.serviceCenterClasses
 
         public float Income { get; set; }
         public float InvenSal { get; set; }
-        public float Paint { get; set; }
-        public float Oil { get; set; }
+       public float Paint { get; set; }
+       public float Oil { get; set; }
         public float Orders { get; set; }
         public float InvenPay { get; set; }
         public float Utility { get; set; }
@@ -64,13 +64,13 @@ namespace RASAMOTORS.Finance.serviceCenterClasses
             SqlConnection conn = new SqlConnection(myconnstring);
             try
             {
-                String sql = "INSERT INTO tbl_Profit(Income,InvenSales,Paint,Oil,Orders,InvenPay,Utility,Salary,NetProfit,Date)VALUES(@Income,@InvenSal,@Paint,@Oil,@Orders,@InvenPay,@Utility,@Salary,@Profit,@date)";
+                String sql = "INSERT INTO tbl_Profit(Income,InvenSales,Orders,InvenPay,Utility,Salary,NetProfit,Date)VALUES(@Income,@InvenSal,@Orders,@InvenPay,@Utility,@Salary,@Profit,@date)";
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
                 cmd.Parameters.AddWithValue("@Income", c.Income);
                 cmd.Parameters.AddWithValue("@InvenSal", c.InvenSal);
-                cmd.Parameters.AddWithValue("@Paint", c.Paint);
-                cmd.Parameters.AddWithValue("@Oil", c.Oil);
+                //cmd.Parameters.AddWithValue("@Paint", c.Paint);
+                //cmd.Parameters.AddWithValue("@Oil", c.Oil);
                 cmd.Parameters.AddWithValue("@Orders", c.Orders);
                 cmd.Parameters.AddWithValue("@InvenPay", c.InvenPay);
                 cmd.Parameters.AddWithValue("@Utility", c.Utility);
