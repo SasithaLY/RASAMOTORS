@@ -72,7 +72,6 @@ namespace RASAMOTORS.JobCard
                 this.Close();
         }
 
-       
 
         private void btnNJob_Click(object sender, EventArgs e)
         {

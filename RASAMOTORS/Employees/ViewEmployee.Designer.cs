@@ -38,6 +38,7 @@
             this.heading = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.empBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagridViewEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empBindingSource)).BeginInit();
@@ -51,7 +52,7 @@
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsert.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnInsert.Location = new System.Drawing.Point(1735, 234);
+            this.btnInsert.Location = new System.Drawing.Point(1735, 227);
             this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(144, 43);
@@ -135,6 +136,23 @@
             // 
             this.empBindingSource.DataMember = "emp";
             // 
+            // buttonReport
+            // 
+            this.buttonReport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonReport.BackColor = System.Drawing.Color.Maroon;
+            this.buttonReport.FlatAppearance.BorderSize = 0;
+            this.buttonReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonReport.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonReport.Location = new System.Drawing.Point(1514, 227);
+            this.buttonReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonReport.Name = "buttonReport";
+            this.buttonReport.Size = new System.Drawing.Size(144, 43);
+            this.buttonReport.TabIndex = 95;
+            this.buttonReport.Text = "Report";
+            this.buttonReport.UseVisualStyleBackColor = false;
+            this.buttonReport.Click += new System.EventHandler(this.buttonReport_Click);
+            // 
             // ViewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -142,6 +160,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1924, 871);
+            this.Controls.Add(this.buttonReport);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.txt_Search);
             this.Controls.Add(this.lbl_search);
@@ -171,5 +190,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label heading;
+        private System.Windows.Forms.Button buttonReport;
     }
 }

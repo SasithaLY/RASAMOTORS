@@ -183,7 +183,7 @@
             this.Controls.Add(this.mainPanel);
             this.Name = "searchJob";
             this.Text = "searchJob";
-            this.Load += new System.EventHandler(this.searchJob_Load);
+//            this.Load += new System.EventHandler(this.searchJob_Load);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
