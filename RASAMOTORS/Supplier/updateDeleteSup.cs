@@ -81,7 +81,7 @@ namespace RASAMOTORS.Supplier
                     //clear data
                     Clear();
 
-
+                    this.Hide();
                 }
                 else
                 {
@@ -182,7 +182,7 @@ namespace RASAMOTORS.Supplier
                         //clear data
                         Clear();
 
-
+                        this.Hide();
                     }
                     else
                     {

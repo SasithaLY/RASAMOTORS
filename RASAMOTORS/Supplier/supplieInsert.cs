@@ -45,24 +45,24 @@ namespace RASAMOTORS.Supplier
             string companyPattern = "^[a-zA-Z][a-zA-Z\\s]+$";
             string emailPattern = @"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$";
             string phonePattern = "[0-9]{10}";
-            string NICPattern = "/^[0-9]{9}[vVxX]$/";
+            //string NICPattern = "/^[0-9]{9}[vVxX]$/";
 
             bool isFirstValid = Regex.IsMatch(txtFName.Text, firstNamePattern);
             bool isLastValid = Regex.IsMatch(txtLName.Text, lastNamePattern);
             bool isCompanyValid = Regex.IsMatch(txtCName.Text, companyPattern);
             bool isPhoneValid = Regex.IsMatch(txtCNum.Text, phonePattern);
             bool isEmailValid = Regex.IsMatch(txtEmail.Text, emailPattern);
-            bool isNICValid = Regex.IsMatch(txtNIC.Text, NICPattern);
+            //bool isNICValid = Regex.IsMatch(txtNIC.Text, NICPattern);
 
-            // if (c.supplierNIC == "" || c.firstName == "" || c.lastName == "" || c.contactNumber == "" || c.supDate == "" || c.email == "" || c.companyName == "" || c.gender == "")
-            // {
-            //     MessageBox.Show("Please fill the Fields");
-            // }
-
-            if (isNICValid || c.supplierNIC == "")
+            if (c.supplierNIC == "" || c.firstName == "" || c.lastName == "" || c.contactNumber == "" || c.supDate == "" || c.email == "" || c.companyName == "" || c.gender == "")
             {
-                MessageBox.Show("Empty Fields or Inalid NIC");
+                MessageBox.Show("Please fill the Fields");
             }
+
+            //else if (isNICValid || c.supplierNIC == "")
+            //{
+            //    MessageBox.Show("Empty Fields or Inalid NIC");
+            //}
 
             else if (!isFirstValid || c.firstName == "")
             {
@@ -110,6 +110,8 @@ namespace RASAMOTORS.Supplier
 
                     //clear data
                     Clear();
+
+                    
                 }
 
                 else
@@ -217,6 +219,78 @@ namespace RASAMOTORS.Supplier
             else
             {
                 labLastName.Visible = false;
+            }
+        }
+
+        private void txtNIC_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNIC.Text == "")
+            {
+                labNIC.Visible = false;
+            }
+
+            else if (!Regex.IsMatch(txtNIC.Text, "[0-9]{9}[vVxX]{1}$"))
+            {
+                labNIC.Visible = true;
+            }
+
+            else
+            {
+                labNIC.Visible = false;
+            }
+        }
+
+        private void txtCNum_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCNum.Text == "")
+            {
+                labCNum.Visible = false;
+            }
+
+            else if (!Regex.IsMatch(txtCNum.Text, "[0-9]{10}"))
+            {
+                labCNum.Visible = true;
+            }
+
+            else
+            {
+                labCNum.Visible = false;
+            }
+        }
+
+        private void txtEmail_TextChanged_1(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "")
+            {
+                labEmail.Visible = false;
+            }
+
+            else if (!Regex.IsMatch(txtEmail.Text, @"^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"))
+            {
+                labEmail.Visible = true;
+            }
+
+            else
+            {
+                labEmail.Visible = false;
+            }
+        }
+
+        private void txtCName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCName.Text == "")
+            {
+                labCompany.Visible = false;
+            }
+
+            else if (!Regex.IsMatch(txtCName.Text, "^[a-zA-Z][a-zA-Z\\s]+$"))
+            {
+                labCompany.Visible = true;
+            }
+
+            else
+            {
+                labCompany.Visible = false;
             }
         }
     }

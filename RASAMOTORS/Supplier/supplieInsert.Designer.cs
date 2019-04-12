@@ -55,6 +55,10 @@
             this.btnADD = new System.Windows.Forms.Button();
             this.labFirstName = new System.Windows.Forms.Label();
             this.labLastName = new System.Windows.Forms.Label();
+            this.labNIC = new System.Windows.Forms.Label();
+            this.labCNum = new System.Windows.Forms.Label();
+            this.labEmail = new System.Windows.Forms.Label();
+            this.labCompany = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -162,6 +166,7 @@
             this.txtCName.Name = "txtCName";
             this.txtCName.Size = new System.Drawing.Size(148, 26);
             this.txtCName.TabIndex = 68;
+            this.txtCName.TextChanged += new System.EventHandler(this.txtCName_TextChanged);
             // 
             // supCName
             // 
@@ -183,6 +188,7 @@
             this.txtNIC.Name = "txtNIC";
             this.txtNIC.Size = new System.Drawing.Size(148, 26);
             this.txtNIC.TabIndex = 66;
+            this.txtNIC.TextChanged += new System.EventHandler(this.txtNIC_TextChanged);
             // 
             // supNIC
             // 
@@ -228,6 +234,7 @@
             this.txtCNum.Name = "txtCNum";
             this.txtCNum.Size = new System.Drawing.Size(148, 26);
             this.txtCNum.TabIndex = 62;
+            this.txtCNum.TextChanged += new System.EventHandler(this.txtCNum_TextChanged);
             // 
             // supCNum
             // 
@@ -250,6 +257,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(148, 26);
             this.txtEmail.TabIndex = 60;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged_1);
             // 
             // supEmail
             // 
@@ -363,12 +371,68 @@
             this.labLastName.Text = "Invalid Input";
             this.labLastName.Visible = false;
             // 
+            // labNIC
+            // 
+            this.labNIC.AutoSize = true;
+            this.labNIC.BackColor = System.Drawing.Color.Maroon;
+            this.labNIC.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNIC.ForeColor = System.Drawing.Color.White;
+            this.labNIC.Location = new System.Drawing.Point(792, 162);
+            this.labNIC.Name = "labNIC";
+            this.labNIC.Size = new System.Drawing.Size(123, 20);
+            this.labNIC.TabIndex = 82;
+            this.labNIC.Text = "Invalid Input";
+            this.labNIC.Visible = false;
+            // 
+            // labCNum
+            // 
+            this.labCNum.AutoSize = true;
+            this.labCNum.BackColor = System.Drawing.Color.Maroon;
+            this.labCNum.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCNum.ForeColor = System.Drawing.Color.White;
+            this.labCNum.Location = new System.Drawing.Point(792, 313);
+            this.labCNum.Name = "labCNum";
+            this.labCNum.Size = new System.Drawing.Size(123, 20);
+            this.labCNum.TabIndex = 83;
+            this.labCNum.Text = "Invalid Input";
+            this.labCNum.Visible = false;
+            // 
+            // labEmail
+            // 
+            this.labEmail.AutoSize = true;
+            this.labEmail.BackColor = System.Drawing.Color.Maroon;
+            this.labEmail.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labEmail.ForeColor = System.Drawing.Color.White;
+            this.labEmail.Location = new System.Drawing.Point(792, 422);
+            this.labEmail.Name = "labEmail";
+            this.labEmail.Size = new System.Drawing.Size(123, 20);
+            this.labEmail.TabIndex = 84;
+            this.labEmail.Text = "Invalid Input";
+            this.labEmail.Visible = false;
+            // 
+            // labCompany
+            // 
+            this.labCompany.AutoSize = true;
+            this.labCompany.BackColor = System.Drawing.Color.Maroon;
+            this.labCompany.Font = new System.Drawing.Font("28 Days Later", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCompany.ForeColor = System.Drawing.Color.White;
+            this.labCompany.Location = new System.Drawing.Point(792, 470);
+            this.labCompany.Name = "labCompany";
+            this.labCompany.Size = new System.Drawing.Size(123, 20);
+            this.labCompany.TabIndex = 85;
+            this.labCompany.Text = "Invalid Input";
+            this.labCompany.Visible = false;
+            // 
             // supplieInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1031, 732);
+            this.Controls.Add(this.labCompany);
+            this.Controls.Add(this.labEmail);
+            this.Controls.Add(this.labCNum);
+            this.Controls.Add(this.labNIC);
             this.Controls.Add(this.labLastName);
             this.Controls.Add(this.labFirstName);
             this.Controls.Add(this.btnClear);
@@ -432,5 +496,9 @@
         private System.Windows.Forms.Button btnADD;
         private System.Windows.Forms.Label labFirstName;
         private System.Windows.Forms.Label labLastName;
+        private System.Windows.Forms.Label labNIC;
+        private System.Windows.Forms.Label labCNum;
+        private System.Windows.Forms.Label labEmail;
+        private System.Windows.Forms.Label labCompany;
     }
 }

@@ -1,4 +1,5 @@
 
+using RASAMOTORS.Inventory;
 using RASAMOTORS.Suppliers;
 using RASAMOTORS.Suppliers;
 using System;
@@ -30,6 +31,7 @@ namespace RASAMOTORS
             this.Close();
 
             //new Supplier.suppliers().Show();
+        }
 
         private void jobBtn_Click(object sender, EventArgs e)
         {

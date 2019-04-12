@@ -37,7 +37,7 @@ namespace RASAMOTORS.Supplier
             suppliers supplier = new suppliers();
             supplier.ShowDialog();
 
-            this.Close();
+            
         }
 
         private void reportViewer1_Load(object sender, EventArgs e)

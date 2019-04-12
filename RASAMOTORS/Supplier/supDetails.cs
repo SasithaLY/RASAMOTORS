@@ -53,7 +53,7 @@ namespace RASAMOTORS.Suppliers
             supplieInsert supplier = new supplieInsert();
             supplier.ShowDialog();
 
-            this.Close();
+            
 
 
         }
@@ -72,11 +72,23 @@ namespace RASAMOTORS.Suppliers
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
             string keyword = txtSearch.Text;
-            SqlConnection conn = new SqlConnection(myconnstring);
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM supplierDetails WHERE supplierID LIKE '%" + keyword + "%' OR supplierNIC LIKE '%" + keyword + "%' OR firstName LIKE '%" + keyword + "%' OR lastName LIKE '%" + keyword + "%' OR contactNumber LIKE '%" + keyword + "%' OR supDate LIKE '%" + keyword + "%' OR email LIKE '%" + keyword + "%' OR companyName LIKE '%" + keyword + "%' OR gender LIKE '%" + keyword + "%'", conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            supplierView.DataSource = dt;
+
+            if (keyword == "ID, First Name OR Company")
+            {
+                DataTable dt = c.Select();
+
+                supplierView.DataSource = dt;
+            }
+
+            else
+            {
+                SqlConnection conn = new SqlConnection(myconnstring);
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM supplierDetails WHERE supplierID LIKE '%" + keyword + "%' OR supplierNIC LIKE '%" + keyword + "%' OR firstName LIKE '%" + keyword + "%' OR lastName LIKE '%" + keyword + "%' OR contactNumber LIKE '%" + keyword + "%' OR supDate LIKE '%" + keyword + "%' OR email LIKE '%" + keyword + "%' OR companyName LIKE '%" + keyword + "%' OR gender LIKE '%" + keyword + "%'", conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                supplierView.DataSource = dt;
+
+            }
         }
 
         private void btnRepotr_Click_1(object sender, EventArgs e)
@@ -85,7 +97,7 @@ namespace RASAMOTORS.Suppliers
             reportViewSup supplier = new reportViewSup();
             supplier.ShowDialog();
 
-            this.Close();
+            
         }
 
         private void supplierView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -95,7 +107,9 @@ namespace RASAMOTORS.Suppliers
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Home supplier = new Home();
+            supplier.ShowDialog();
         }
 
         private void supSearch_Click(object sender, EventArgs e)

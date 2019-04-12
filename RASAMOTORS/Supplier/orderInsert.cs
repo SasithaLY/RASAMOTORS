@@ -52,11 +52,23 @@ namespace RASAMOTORS.Supplier
             //search the data
 
             string keyword = txtSearch.Text;
-            SqlConnection conn = new SqlConnection(myconnstring);
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM orderDetails WHERE orderID LIKE '%" + keyword + "%' OR supplierName LIKE '%" + keyword + "%' OR orderDate LIKE '%" + keyword + "%' OR inventoryType LIKE '%" + keyword + "%' OR amount LIKE '%" + keyword + "%'", conn);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            orderView.DataSource = dt;
+
+            if (keyword == "ID OR Supplier Name")
+            {
+                DataTable dt = c.Select();
+
+                orderView.DataSource = dt;
+            }
+
+            else
+            {
+
+                SqlConnection conn = new SqlConnection(myconnstring);
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM orderDetails WHERE orderID LIKE '%" + keyword + "%' OR supplierName LIKE '%" + keyword + "%' OR orderDate LIKE '%" + keyword + "%' OR inventoryType LIKE '%" + keyword + "%' OR amount LIKE '%" + keyword + "%'", conn);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                orderView.DataSource = dt;
+            }
         }
 
         private void orderInsert_Load(object sender, EventArgs e)

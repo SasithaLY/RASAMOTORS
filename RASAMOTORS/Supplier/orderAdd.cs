@@ -44,12 +44,12 @@ namespace RASAMOTORS.Supplier
             bool isSupplierNamePattern = Regex.IsMatch(txtSupName.Text, supplierNamePattern);
             bool isAmountPattern = Regex.IsMatch(txtAmount.Text, amountPattern);
 
-            //if (c.supplierName == "" || c.orderDate == "" || c.inventoryType == "" || c.amount == "")
-            //{
-            //   MessageBox.Show("Please fill the Fields");
-            //}
+            if (c.supplierName == "" || c.orderDate == "" || c.inventoryType == "" || c.amount == "")
+            {
+                MessageBox.Show("Please fill the Fields");
+            }
 
-            if (!isSupplierNamePattern || c.supplierName == "")
+            else if (!isSupplierNamePattern || c.supplierName == "")
             {
                 MessageBox.Show("Empty Fields or Invalid Supplier name");
             }
@@ -79,6 +79,8 @@ namespace RASAMOTORS.Supplier
                     DataTable dt = c.Select();
                     //clear data
                     Clear();
+
+                    
                 }
                 else
                 {
@@ -137,6 +139,40 @@ namespace RASAMOTORS.Supplier
             order.ShowDialog();
         }
 
+        private void txtSupName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSupName.Text == "")
+            {
+                labSupName.Visible = false;
+            }
 
+            else if (!Regex.IsMatch(txtSupName.Text, "^[a-zA-Z][a-zA-Z\\s]+$"))
+            {
+                labSupName.Visible = true;
+            }
+
+            else
+            {
+                labSupName.Visible = false;
+            }
+        }
+
+        private void txtAmount_TextChanged(object sender, EventArgs e)
+        {
+            if (txtAmount.Text == "")
+            {
+                labAmount.Visible = false;
+            }
+
+            else if (!Regex.IsMatch(txtAmount.Text, @"^[0-9.9]+$"))
+            {
+                labAmount.Visible = true;
+            }
+
+            else
+            {
+                labAmount.Visible = false;
+            }
+        }
     }
 }
