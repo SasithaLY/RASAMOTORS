@@ -61,7 +61,7 @@
             this.pnlHeader.Controls.Add(this.label9);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(13, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(1440, 161);
             this.pnlHeader.TabIndex = 14;
@@ -71,7 +71,7 @@
             this.panel7.BackColor = System.Drawing.Color.Maroon;
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 149);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(1440, 12);
             this.panel7.TabIndex = 19;
@@ -118,7 +118,7 @@
             this.pnlMenu.Controls.Add(this.cusBtn);
             this.pnlMenu.Controls.Add(this.jobBtn);
             this.pnlMenu.Location = new System.Drawing.Point(0, -48);
-            this.pnlMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(567, 1018);
             this.pnlMenu.TabIndex = 15;
@@ -136,7 +136,7 @@
             this.button6.Image = global::RASAMOTORS.Properties.Resources.sal_2;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(16, 844);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(333, 64);
             this.button6.TabIndex = 11;
@@ -148,7 +148,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::RASAMOTORS.Properties.Resources.Rasa_Motors_Logo;
             this.pictureBox1.Location = new System.Drawing.Point(16, 52);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(333, 149);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,12 +168,13 @@
             this.button5.Image = global::RASAMOTORS.Properties.Resources.finance;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(16, 779);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(333, 64);
             this.button5.TabIndex = 10;
             this.button5.Text = "Finance";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -188,7 +189,7 @@
             this.button4.Image = global::RASAMOTORS.Properties.Resources.Employee;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(16, 708);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(333, 64);
             this.button4.TabIndex = 9;
@@ -209,7 +210,7 @@
             this.button3.Image = global::RASAMOTORS.Properties.Resources.Suppliers;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(16, 636);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(333, 64);
             this.button3.TabIndex = 8;
@@ -230,7 +231,7 @@
             this.btnInventory.Image = global::RASAMOTORS.Properties.Resources.Inventory_icon;
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventory.Location = new System.Drawing.Point(16, 565);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(4);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(333, 64);
             this.btnInventory.TabIndex = 7;
@@ -251,7 +252,7 @@
             this.payBtn.Image = global::RASAMOTORS.Properties.Resources.Payment;
             this.payBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.payBtn.Location = new System.Drawing.Point(16, 494);
-            this.payBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.payBtn.Margin = new System.Windows.Forms.Padding(4);
             this.payBtn.Name = "payBtn";
             this.payBtn.Size = new System.Drawing.Size(333, 64);
             this.payBtn.TabIndex = 6;
@@ -271,7 +272,7 @@
             this.cusBtn.Image = global::RASAMOTORS.Properties.Resources.Customers;
             this.cusBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.cusBtn.Location = new System.Drawing.Point(16, 423);
-            this.cusBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cusBtn.Margin = new System.Windows.Forms.Padding(4);
             this.cusBtn.Name = "cusBtn";
             this.cusBtn.Size = new System.Drawing.Size(333, 64);
             this.cusBtn.TabIndex = 5;
@@ -289,7 +290,7 @@
             this.jobBtn.Image = global::RASAMOTORS.Properties.Resources.job;
             this.jobBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.jobBtn.Location = new System.Drawing.Point(16, 353);
-            this.jobBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.jobBtn.Margin = new System.Windows.Forms.Padding(4);
             this.jobBtn.Name = "jobBtn";
             this.jobBtn.Size = new System.Drawing.Size(333, 64);
             this.jobBtn.TabIndex = 4;
@@ -306,7 +307,7 @@
             this.panel1.Controls.Add(this.pnlHeader);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(373, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1453, 923);
             this.panel1.TabIndex = 16;
@@ -317,7 +318,7 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(13, 869);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1440, 54);
             this.panel3.TabIndex = 17;
@@ -340,7 +341,7 @@
             this.panel2.BackColor = System.Drawing.Color.Maroon;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(13, 923);
             this.panel2.TabIndex = 0;
@@ -353,7 +354,7 @@
             this.ClientSize = new System.Drawing.Size(1827, 922);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlMenu);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Home";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

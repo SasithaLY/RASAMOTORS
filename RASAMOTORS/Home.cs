@@ -45,5 +45,10 @@ namespace RASAMOTORS
             Employees.ViewEmployee viewEmployee = new Employees.ViewEmployee();
             viewEmployee.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            new Finance.calculation().Show();
+        }
     }
 }
