@@ -1,6 +1,7 @@
 
 using RASAMOTORS.Inventory;
 using RASAMOTORS.Suppliers;
+using RASAMOTORS.Finance;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,7 +48,20 @@ namespace RASAMOTORS
             viewEmployee.Show();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnFinance_Click(object sender, EventArgs e)
+        {
+            //Finance.calculation cal = new Finance.calculation();
+            //cal.Show();
+            //new Finance.calculation().Show();
+            
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            new Finance.calculation().Show();
+        }
+
+        private void btnTest2_Click(object sender, EventArgs e)
         {
             new Finance.calculation().Show();
         }

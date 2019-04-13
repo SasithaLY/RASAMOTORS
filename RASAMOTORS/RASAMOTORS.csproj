@@ -183,11 +183,22 @@
     </Compile>
     <Compile Include="JobCard\jobCardClasses\assignJobclass.cs" />
     <Compile Include="JobCard\jobCardClasses\jobCard.cs" />
+    <Compile Include="JobCard\jobCardDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jobCardDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="JobCard\ReceiptPrint.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JobCard\ReceiptPrint.Designer.cs">
       <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
     </Compile>
     <Compile Include="JobCard\searchJob.cs">
       <SubType>Form</SubType>
@@ -305,8 +316,12 @@
     <EmbeddedResource Include="JobCard\createJob.resx">
       <DependentUpon>createJob.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\JobReport.rdlc" />
     <EmbeddedResource Include="JobCard\ReceiptPrint.resx">
       <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JobCard\searchJob.resx">
       <DependentUpon>searchJob.cs</DependentUpon>
@@ -378,6 +393,17 @@
     </None>
     <None Include="Inventory\InventoryData.xss">
       <DependentUpon>InventoryData.xsd</DependentUpon>
+    </None>
+    <None Include="JobCard\jobCardDS.xsc">
+      <DependentUpon>jobCardDS.xsd</DependentUpon>
+    </None>
+    <None Include="JobCard\jobCardDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>jobCardDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="JobCard\jobCardDS.xss">
+      <DependentUpon>jobCardDS.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
