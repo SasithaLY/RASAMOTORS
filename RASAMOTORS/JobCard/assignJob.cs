@@ -19,7 +19,8 @@ namespace RASAMOTORS.JobCard
             InitializeComponent();
         }
 
-        public static SqlConnection con = new SqlConnection(@"Data Source=CHARMINPC\SQLEXPRESS;Initial Catalog=ServiceCenter;Integrated Security=True");
+        static string myconnstring = Common.Utils.ConnectionString;
+        SqlConnection con = new SqlConnection(myconnstring);
 
         assignJobclass obj = new assignJobclass();
 
