@@ -69,6 +69,44 @@
   <ItemGroup>
     <Compile Include="Common\DBConnect.cs" />
     <Compile Include="Common\Utils.cs" />
+    <Compile Include="CustomerVehicles\Classes\CustomerClass.cs" />
+    <Compile Include="CustomerVehicles\Classes\VehicleClass.cs" />
+    <Compile Include="CustomerVehicles\frmAddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewCustomer.Designer.cs">
+      <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmAddNewVehicle.Designer.cs">
+      <DependentUpon>frmAddNewVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCustomersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCustomersList.Designer.cs">
+      <DependentUpon>frmCustomersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCusUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmCusUpdateDelete.Designer.cs">
+      <DependentUpon>frmCusUpdateDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehicleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehicleList.Designer.cs">
+      <DependentUpon>frmVehicleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehUpdateDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerVehicles\frmVehUpdateDelete.Designer.cs">
+      <DependentUpon>frmVehUpdateDelete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +197,24 @@
     <Compile Include="Supplier\updateDeleteSup.Designer.cs">
       <DependentUpon>updateDeleteSup.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CustomerVehicles\frmAddNewCustomer.resx">
+      <DependentUpon>frmAddNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmAddNewVehicle.resx">
+      <DependentUpon>frmAddNewVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmCustomersList.resx">
+      <DependentUpon>frmCustomersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmCusUpdateDelete.resx">
+      <DependentUpon>frmCusUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmVehicleList.resx">
+      <DependentUpon>frmVehicleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerVehicles\frmVehUpdateDelete.resx">
+      <DependentUpon>frmVehUpdateDelete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,7 +315,6 @@
     <None Include="Resources\sal 2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CustomerVehicles\" />
     <Folder Include="Employees\" />
     <Folder Include="Finance\" />
     <Folder Include="Payments\" />

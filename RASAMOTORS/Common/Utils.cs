@@ -8,7 +8,7 @@ namespace RASAMOTORS.Common
 {
     class Utils
     {
-        private static string connectionString = "Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True";
+        private static string connectionString = @"Data Source=PASAN\SQLEXPRESS;Initial Catalog=ServiceCenterManagementDB;Integrated Security=True";
 
         public static string ConnectionString
         {
