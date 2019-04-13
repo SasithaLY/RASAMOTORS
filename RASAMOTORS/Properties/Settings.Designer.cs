@@ -37,7 +37,7 @@ namespace RASAMOTORS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HEN8CVM;Initial Catalog=ServiceCenterManagementDB;Integrated " +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated " +
             "Security=True")]
         public string ServiceCenterManagementDBConnectionString {
             get {
@@ -48,8 +48,8 @@ namespace RASAMOTORS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-A6OVS3L\\SQLEXPRESS;Initial Catalog=NetProfit;Integrated Secur" +
-            "ity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-T0HOCLV;Initial Catalog=ServiceCenterManagementDB;Integrated " +
+            "Security=True")]
         public string NetProfitConnectionString {
             get {
                 return ((string)(this["NetProfitConnectionString"]));

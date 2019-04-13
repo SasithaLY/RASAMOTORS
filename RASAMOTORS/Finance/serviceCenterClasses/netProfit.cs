@@ -28,7 +28,8 @@ namespace RASAMOTORS.Finance.serviceCenterClasses
         public DateTime date { get; set; }
         //public int RowIndex { get; internal set; }
 
-        String myconnstring = Common.Utils.ConnectionString;
+        string myconnstring = Common.Utils.ConnectionString;
+        
 
         public DataTable Select()
         {
