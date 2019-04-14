@@ -102,6 +102,36 @@
     <Compile Include="Employees\ViewEmployee.Designer.cs">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finance\calculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\calculation.Designer.cs">
+      <DependentUpon>calculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\financeUpDel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\financeUpDel.Designer.cs">
+      <DependentUpon>financeUpDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\financialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\financialView.Designer.cs">
+      <DependentUpon>financialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\profitData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>profitData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\reportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\reportViewer.Designer.cs">
+      <DependentUpon>reportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\serviceCenterClasses\netProfit.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,11 +183,22 @@
     </Compile>
     <Compile Include="JobCard\jobCardClasses\assignJobclass.cs" />
     <Compile Include="JobCard\jobCardClasses\jobCard.cs" />
+    <Compile Include="JobCard\jobCardDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jobCardDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="JobCard\ReceiptPrint.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="JobCard\ReceiptPrint.Designer.cs">
       <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobCard\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobCard\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
     </Compile>
     <Compile Include="JobCard\searchJob.cs">
       <SubType>Form</SubType>
@@ -240,6 +281,19 @@
     <EmbeddedResource Include="Employees\ViewEmployee.resx">
       <DependentUpon>ViewEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Finance\calculation.resx">
+      <DependentUpon>calculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financeReport.rdlc" />
+    <EmbeddedResource Include="Finance\financeUpDel.resx">
+      <DependentUpon>financeUpDel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\financialView.resx">
+      <DependentUpon>financialView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\reportViewer.resx">
+      <DependentUpon>reportViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,8 +316,12 @@
     <EmbeddedResource Include="JobCard\createJob.resx">
       <DependentUpon>createJob.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\JobReport.rdlc" />
     <EmbeddedResource Include="JobCard\ReceiptPrint.resx">
       <DependentUpon>ReceiptPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobCard\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JobCard\searchJob.resx">
       <DependentUpon>searchJob.cs</DependentUpon>
@@ -314,6 +372,17 @@
     <None Include="Employees\EmployeeDataSet.xss">
       <DependentUpon>EmployeeDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Finance\profitData.xsc">
+      <DependentUpon>profitData.xsd</DependentUpon>
+    </None>
+    <None Include="Finance\profitData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>profitData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Finance\profitData.xss">
+      <DependentUpon>profitData.xsd</DependentUpon>
+    </None>
     <None Include="Inventory\InventoryData.xsc">
       <DependentUpon>InventoryData.xsd</DependentUpon>
     </None>
@@ -324,6 +393,17 @@
     </None>
     <None Include="Inventory\InventoryData.xss">
       <DependentUpon>InventoryData.xsd</DependentUpon>
+    </None>
+    <None Include="JobCard\jobCardDS.xsc">
+      <DependentUpon>jobCardDS.xsd</DependentUpon>
+    </None>
+    <None Include="JobCard\jobCardDS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>jobCardDS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="JobCard\jobCardDS.xss">
+      <DependentUpon>jobCardDS.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -379,7 +459,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CustomerVehicles\" />
-    <Folder Include="Finance\" />
     <Folder Include="Payments\" />
     <Folder Include="Salary\" />
   </ItemGroup>
