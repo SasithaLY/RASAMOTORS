@@ -38,7 +38,7 @@
             this.txtSrch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvallJobs = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.jobDescLable = new System.Windows.Forms.Label();
@@ -72,6 +72,7 @@
             this.button1.TabIndex = 58;
             this.button1.Text = "BACK";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
@@ -127,6 +128,7 @@
             this.txtSrch.Name = "txtSrch";
             this.txtSrch.Size = new System.Drawing.Size(269, 20);
             this.txtSrch.TabIndex = 54;
+            this.txtSrch.TextChanged += new System.EventHandler(this.txtSrch_TextChanged);
             // 
             // label4
             // 
@@ -146,18 +148,20 @@
             this.dgvallJobs.Name = "dgvallJobs";
             this.dgvallJobs.Size = new System.Drawing.Size(330, 154);
             this.dgvallJobs.TabIndex = 52;
+            this.dgvallJobs.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvallJobs_RowHeaderMouseClick);
             // 
-            // button3
+            // btnDel
             // 
-            this.button3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Location = new System.Drawing.Point(369, 379);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 35);
-            this.button3.TabIndex = 51;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDel.Location = new System.Drawing.Point(369, 379);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(75, 35);
+            this.btnDel.TabIndex = 51;
+            this.btnDel.Text = "Delete";
+            this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnUpdate
             // 
@@ -170,6 +174,7 @@
             this.btnUpdate.TabIndex = 50;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
@@ -315,7 +320,7 @@
             this.Controls.Add(this.txtSrch);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvallJobs);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.jobDescLable);
@@ -355,7 +360,7 @@
         private System.Windows.Forms.TextBox txtSrch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvallJobs;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Label jobDescLable;
