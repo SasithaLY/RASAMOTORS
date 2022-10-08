@@ -5,3 +5,4 @@ This application is developed to maintain tasks of an automobile service center.
 * Vehicle management
 * Job management
 * Inventory Management
+* Payment management
